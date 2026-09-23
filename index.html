@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Combo đi chơi · Cầu Giấy</title>
+  <meta name="description" content="60 combo ăn uống quanh Cầu Giấy — bấm vào quán để mở Google Maps." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💛</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <p class="hero-kicker">💌 Gửi em</p>
+    <h1>Combo đi chơi</h1>
+    <p class="hero-sub">60 combo ăn uống quanh Cầu Giấy — em chọn một cái, còn lại để anh lo 😌</p>
+  </header>
+
+  <nav class="tabs" id="tabs" aria-label="Chọn danh sách combo"></nav>
+
+  <main>
+    <div class="toolbar">
+      <p class="count" id="count"></p>
+      <button class="dice-btn" id="diceBtn" type="button">🎲 Chọn giúp em</button>
+    </div>
+    <section class="combo-list" id="comboList" aria-live="polite"></section>
+  </main>
+
+  <footer>Made with ❤️ — hẹn hò vui vẻ nha em</footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

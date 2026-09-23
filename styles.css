@@ -1,0 +1,363 @@
+:root {
+  --bg: #fff6f0;
+  --card: #ffffff;
+  --ink: #3b2b26;
+  --muted: #8d7a72;
+  --accent: #e85d5d;
+  --accent-soft: rgba(232, 93, 93, 0.18);
+  --food-bg: #ffe9e1;
+  --food-ink: #c0453c;
+  --cafe-bg: #e3f4ea;
+  --cafe-ink: #2f7d59;
+  --line: #f2e3da;
+  --shadow: 0 6px 24px rgba(94, 60, 46, 0.08);
+  --radius: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.hero {
+  padding: 46px 20px 22px;
+  text-align: center;
+  background:
+    radial-gradient(120% 90% at 12% 0%, #ffe1d3 0%, rgba(255, 225, 211, 0) 55%),
+    radial-gradient(120% 90% at 88% 0%, #ffe9ef 0%, rgba(255, 233, 239, 0) 55%);
+}
+
+.hero-kicker {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.hero h1 {
+  margin: 8px 0 10px;
+  font-size: clamp(30px, 8vw, 46px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.hero-sub {
+  margin: 0 auto;
+  max-width: 540px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.tabs {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  padding: 10px 16px;
+  background: rgba(255, 246, 240, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+
+.tab {
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 9px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--ink);
+  cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.tab:hover {
+  border-color: #f0c9bd;
+}
+
+.tab.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(232, 93, 93, 0.28);
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 14px 16px 40px;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 8px 2px 14px;
+}
+
+.count {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  font-size: 13.5px;
+  color: var(--muted);
+}
+
+.dice-btn {
+  flex-shrink: 0;
+  white-space: nowrap;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 18px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--ink);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(59, 43, 38, 0.18);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.dice-btn:hover {
+  background: #2c1f1b;
+}
+
+.dice-btn:active {
+  transform: scale(0.96);
+}
+
+.combo-list {
+  display: grid;
+  gap: 14px;
+}
+
+@media (min-width: 760px) {
+  .combo-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+}
+
+.combo {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 14px;
+  scroll-margin-top: 86px;
+}
+
+.combo.is-picked {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft), var(--shadow);
+  animation: pop 0.35s ease;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.97);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.combo-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 2px 4px 10px;
+}
+
+.combo-num {
+  font-size: 12.5px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #fff;
+  background: linear-gradient(135deg, #ff8a65, var(--accent));
+  border-radius: 8px;
+  padding: 3px 9px;
+}
+
+.combo-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.place {
+  display: flex;
+  gap: 11px;
+  padding: 11px 12px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.16s ease, border-color 0.16s ease, transform 0.16s ease;
+}
+
+.place:hover {
+  transform: translateY(-1px);
+}
+
+.place:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.place-food {
+  background: linear-gradient(180deg, #fff8f4, #fff);
+}
+
+.place-food:hover {
+  border-color: #ffc7b8;
+  background: var(--food-bg);
+}
+
+.place-cafe {
+  background: linear-gradient(180deg, #f6fcf8, #fff);
+}
+
+.place-cafe:hover {
+  border-color: #b9e3cd;
+  background: var(--cafe-bg);
+}
+
+.place-icon {
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+.place-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.place-kind {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.place-food .place-kind {
+  color: var(--food-ink);
+}
+
+.place-cafe .place-kind {
+  color: var(--cafe-ink);
+}
+
+.place-name {
+  font-size: 15.5px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.place-addr {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.place-desc {
+  font-size: 13.5px;
+  line-height: 1.45;
+  color: #6d5b54;
+}
+
+.place-cta {
+  margin-top: 3px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #bda69b;
+  transition: color 0.15s ease;
+}
+
+.place:hover .place-cta {
+  color: var(--accent);
+}
+
+.combo-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.combo-link::before,
+.combo-link::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  z-index: 50;
+  max-width: calc(100vw - 32px);
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(59, 43, 38, 0.3);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 16px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+footer {
+  padding: 0 20px 44px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .combo.is-picked {
+    animation: none;
+  }
+  .place:hover {
+    transform: none;
+  }
+}
