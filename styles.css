@@ -64,15 +64,8 @@ body {
   color: var(--accent);
 }
 
-.hero h1 {
-  margin: 8px 0 10px;
-  font-size: clamp(30px, 8vw, 46px);
-  font-weight: 800;
-  letter-spacing: -0.02em;
-}
-
 .hero-sub {
-  margin: 0 auto;
+  margin: 10px auto 0;
   max-width: 560px;
   font-size: 15px;
   line-height: 1.55;
