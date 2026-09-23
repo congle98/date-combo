@@ -6,14 +6,13 @@
   });
 
   var tabsEl = document.getElementById("tabs");
-  var listEl = document.getElementById("comboList");
+  var listEl = document.getElementById("placeList");
   var countEl = document.getElementById("count");
-  var diceBtn = document.getElementById("diceBtn");
-  var toastEl = document.getElementById("toast");
+  var searchInput = document.getElementById("searchInput");
+  var searchClear = document.getElementById("searchClear");
 
   var activeTabId = tabs[0].id;
-  var lastPick = null;
-  var toastTimer = null;
+  var keyword = "";
 
   function escapeHtml(value) {
     return String(value)
@@ -24,8 +23,16 @@
       .replace(/'/g, "&#39;");
   }
 
-  function mapsUrl(place) {
-    var query = place.name + " " + place.address + " Hà Nội";
+  function normalize(value) {
+    return String(value)
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/đ/g, "d");
+  }
+
+  function mapsUrl(item) {
+    var query = item.name + " " + item.address + " Hà Nội";
     return "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(query);
   }
 
@@ -35,39 +42,47 @@
     })[0];
   }
 
-  function placeHtml(place, kind, tab) {
-    var isFood = kind === "food";
-    var icon = isFood ? "🍽️" : "☕";
-    var cls = isFood ? "place-food" : "place-cafe";
-    var kindLabel = isFood ? tab.foodLabel : tab.cafeLabel;
+  function matches(item) {
+    if (!keyword) return true;
+    var haystack = normalize(item.name + " " + item.address + " " + item.desc);
+    return haystack.indexOf(normalize(keyword)) !== -1;
+  }
+
+  function cardHtml(item, index, tab) {
+    var num = String(index + 1).padStart(2, "0");
+    var media = "";
+
+    if (item.photo) {
+      media =
+        '<img class="place-img" src="' + item.photo + '" alt="' + escapeHtml(item.name) + '" loading="lazy" />';
+    }
+
+    media +=
+      '<span class="place-emoji" aria-hidden="true">' + tab.emoji + "</span>" +
+      '<span class="place-num">' + num + "</span>";
 
     return (
-      '<a class="place ' + cls + '" href="' + mapsUrl(place) + '" target="_blank" rel="noopener">' +
-        '<span class="place-icon" aria-hidden="true">' + icon + "</span>" +
-        '<span class="place-body">' +
-          '<span class="place-kind">' + escapeHtml(kindLabel) + "</span>" +
-          '<span class="place-name">' + escapeHtml(place.name) + "</span>" +
-          '<span class="place-addr">📍 ' + escapeHtml(place.address) + "</span>" +
-          '<span class="place-desc">' + escapeHtml(place.desc) + "</span>" +
+      '<a class="place-card' + (item.photo ? "" : " is-placeholder") + '" href="' + mapsUrl(item) + '" target="_blank" rel="noopener">' +
+        '<span class="place-media">' + media + "</span>" +
+        '<span class="place-info">' +
+          '<span class="place-name">' + escapeHtml(item.name) + "</span>" +
+          '<span class="place-addr">📍 ' + escapeHtml(item.address) + "</span>" +
+          '<span class="place-desc">' + escapeHtml(item.desc) + "</span>" +
           '<span class="place-cta">Mở trên Google Maps ↗</span>' +
         "</span>" +
       "</a>"
     );
   }
 
-  function comboHtml(combo, index, tab) {
-    var num = String(index + 1).padStart(2, "0");
-    return (
-      '<article class="combo" id="combo-' + tab.id + "-" + combo.id + '">' +
-        '<div class="combo-head">' +
-          '<span class="combo-num">' + num + "</span>" +
-          '<span class="combo-title">Combo ' + num + "</span>" +
-        "</div>" +
-        placeHtml(combo.food, "food", tab) +
-        '<div class="combo-link">rồi ghé</div>' +
-        placeHtml(combo.cafe, "cafe", tab) +
-      "</article>"
-    );
+  function attachImageFallbacks() {
+    var images = listEl.querySelectorAll("img.place-img");
+    Array.prototype.forEach.call(images, function (img) {
+      img.addEventListener("error", function () {
+        var card = img.closest(".place-card");
+        if (card) card.classList.add("is-placeholder");
+        img.remove();
+      });
+    });
   }
 
   function renderTabs() {
@@ -81,7 +96,7 @@
       btn.addEventListener("click", function () {
         if (tab.id !== activeTabId) {
           activeTabId = tab.id;
-          lastPick = null;
+          document.body.dataset.tab = tab.id;
           renderTabs();
           renderList();
           window.scrollTo({ top: 0, behavior: "smooth" });
@@ -93,49 +108,43 @@
 
   function renderList() {
     var tab = getTab(activeTabId);
-    listEl.innerHTML = tab.combos
-      .map(function (combo, index) {
-        return comboHtml(combo, index, tab);
-      })
-      .join("");
-    countEl.textContent = tab.combos.length + " combo · bấm vào quán để mở Google Maps";
-  }
+    var items = tab.items.filter(matches);
 
-  function showToast(message) {
-    toastEl.textContent = message;
-    toastEl.classList.add("show");
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(function () {
-      toastEl.classList.remove("show");
-    }, 2600);
-  }
-
-  function pickRandom() {
-    var tab = getTab(activeTabId);
-    var combos = tab.combos;
-    var index = Math.floor(Math.random() * combos.length);
-
-    if (combos.length > 1 && index === lastPick) {
-      index = (index + 1) % combos.length;
-    }
-    lastPick = index;
-
-    var picked = document.querySelectorAll(".combo.is-picked");
-    Array.prototype.forEach.call(picked, function (el) {
-      el.classList.remove("is-picked");
-    });
-
-    var el = document.getElementById("combo-" + tab.id + "-" + combos[index].id);
-    if (el) {
-      el.classList.add("is-picked");
-      el.scrollIntoView({ behavior: "smooth", block: "center" });
+    if (items.length === 0) {
+      listEl.innerHTML =
+        '<div class="empty">😢 Không tìm thấy địa điểm nào<span>Thử từ khoá khác nhé em</span></div>';
+    } else {
+      listEl.innerHTML = items
+        .map(function (item, index) {
+          return cardHtml(item, index, tab);
+        })
+        .join("");
+      attachImageFallbacks();
     }
 
-    showToast("Combo " + String(index + 1).padStart(2, "0") + " — đi nhé em 😋");
+    if (keyword) {
+      countEl.textContent =
+        items.length + " kết quả cho “" + keyword + "” trong " + tab.label;
+    } else {
+      countEl.textContent = items.length + " địa điểm · bấm để mở Google Maps";
+    }
+
+    searchClear.hidden = !keyword;
   }
 
-  diceBtn.addEventListener("click", pickRandom);
+  searchInput.addEventListener("input", function () {
+    keyword = searchInput.value.trim();
+    renderList();
+  });
 
+  searchClear.addEventListener("click", function () {
+    searchInput.value = "";
+    keyword = "";
+    renderList();
+    searchInput.focus();
+  });
+
+  document.body.dataset.tab = activeTabId;
   renderTabs();
   renderList();
 })();

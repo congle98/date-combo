@@ -2,60 +2,47 @@
 
 const COMBO_DATA = require("./data.js");
 
-const EXPECTED_PER_TAB = 30;
+const EXPECTED = { bbq: 30, mixed: 30, drinks: 18 };
 const errors = [];
 
 const tabs = Object.values(COMBO_DATA);
 
-if (tabs.length !== 2) {
-  errors.push(`Expected 2 tabs, found ${tabs.length}`);
+if (tabs.length !== 3) {
+  errors.push(`Expected 3 tabs, found ${tabs.length}`);
 }
 
 tabs.forEach((tab) => {
   if (!tab.id || !tab.label || !tab.emoji) {
     errors.push(`Tab "${tab.id || "?"}" missing id/label/emoji`);
   }
-  if (!Array.isArray(tab.combos)) {
-    errors.push(`Tab "${tab.id}" has no combos array`);
+  if (!Array.isArray(tab.items)) {
+    errors.push(`Tab "${tab.id}" has no items array`);
     return;
   }
-  if (tab.combos.length !== EXPECTED_PER_TAB) {
-    errors.push(`Tab "${tab.id}" has ${tab.combos.length} combos, expected ${EXPECTED_PER_TAB}`);
+  const expected = EXPECTED[tab.id];
+  if (expected && tab.items.length !== expected) {
+    errors.push(`Tab "${tab.id}" has ${tab.items.length} items, expected ${expected}`);
   }
 
-  const seenIds = new Set();
-  tab.combos.forEach((combo, index) => {
-    const label = `[${tab.id}] combo ${index + 1}`;
+  tab.items.forEach((item, index) => {
+    const label = `[${tab.id}] item ${index + 1}`;
 
-    if (combo.id !== index + 1) {
-      errors.push(`${label}: id is ${combo.id}, expected ${index + 1}`);
-    }
-    if (seenIds.has(combo.id)) {
-      errors.push(`${label}: duplicate id ${combo.id}`);
-    }
-    seenIds.add(combo.id);
-
-    ["food", "cafe"].forEach((kind) => {
-      const place = combo[kind];
-      if (!place) {
-        errors.push(`${label}: missing ${kind}`);
-        return;
-      }
-      ["name", "address", "desc"].forEach((field) => {
-        if (!place[field] || String(place[field]).trim() === "") {
-          errors.push(`${label}: ${kind}.${field} is empty`);
-        }
-      });
-      const url =
-        "https://www.google.com/maps/search/?api=1&query=" +
-        encodeURIComponent(`${place.name} ${place.address} Hà Nội`);
-      if (!url.startsWith("https://www.google.com/maps/search/")) {
-        errors.push(`${label}: bad maps url for ${kind}`);
-      }
-      if (url.length > 900) {
-        errors.push(`${label}: maps url suspiciously long for ${kind}`);
+    ["name", "address", "desc"].forEach((field) => {
+      if (!item[field] || String(item[field]).trim() === "") {
+        errors.push(`${label}: ${field} is empty`);
       }
     });
+
+    if (item.photo && !/^https:\/\/lh3\.googleusercontent\.com\/gps-cs-s\//.test(item.photo)) {
+      errors.push(`${label}: unexpected photo URL`);
+    }
+
+    const url =
+      "https://www.google.com/maps/search/?api=1&query=" +
+      encodeURIComponent(`${item.name} ${item.address} Hà Nội`);
+    if (!url.startsWith("https://www.google.com/maps/search/")) {
+      errors.push(`${label}: bad maps url`);
+    }
   });
 });
 
@@ -65,8 +52,12 @@ if (errors.length > 0) {
   process.exit(1);
 }
 
-const total = tabs.reduce((sum, tab) => sum + tab.combos.length, 0);
-console.log(`OK — ${tabs.length} tabs, ${total} combos, all fields complete, maps links valid`);
+const total = tabs.reduce((sum, tab) => sum + tab.items.length, 0);
+const withPhoto = tabs.reduce(
+  (sum, tab) => sum + tab.items.filter((i) => i.photo).length,
+  0
+);
+console.log(`OK — ${tabs.length} tabs, ${total} items, ${withPhoto} with photos, maps links valid`);
 tabs.forEach((tab) => {
-  console.log(`  ${tab.emoji} ${tab.label}: ${tab.combos.length} combos`);
+  console.log(`  ${tab.emoji} ${tab.label}: ${tab.items.length} items`);
 });

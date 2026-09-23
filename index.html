@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Combo đi chơi · Cầu Giấy</title>
-  <meta name="description" content="60 combo ăn uống quanh Cầu Giấy — bấm vào quán để mở Google Maps." />
+  <title>Đi chơi ăn gì? · Cầu Giấy</title>
+  <meta name="description" content="78 địa điểm ăn uống quanh Cầu Giấy — đồ nướng, đồ tổng hợp và quán nước. Bấm để mở Google Maps." />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💛</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,23 +14,32 @@
 <body>
   <header class="hero">
     <p class="hero-kicker">💌 Gửi em</p>
-    <h1>Combo đi chơi</h1>
-    <p class="hero-sub">60 combo ăn uống quanh Cầu Giấy — em chọn một cái, còn lại để anh lo 😌</p>
+    <h1>Đi chơi ăn gì?</h1>
+    <p class="hero-sub">78 địa điểm quanh Cầu Giấy — em chọn một cái, còn lại để anh lo 😌</p>
   </header>
 
-  <nav class="tabs" id="tabs" aria-label="Chọn danh sách combo"></nav>
+  <nav class="tabs" id="tabs" aria-label="Chọn danh sách địa điểm"></nav>
 
   <main>
-    <div class="toolbar">
-      <p class="count" id="count"></p>
-      <button class="dice-btn" id="diceBtn" type="button">🎲 Chọn giúp em</button>
+    <div class="search-row">
+      <div class="search-box">
+        <span class="search-icon" aria-hidden="true">🔍</span>
+        <input
+          id="searchInput"
+          type="search"
+          placeholder="Tìm theo tên quán, đường, mô tả..."
+          autocomplete="off"
+          aria-label="Tìm kiếm địa điểm"
+        />
+        <button id="searchClear" class="search-clear" type="button" aria-label="Xoá tìm kiếm" hidden>✕</button>
+      </div>
     </div>
-    <section class="combo-list" id="comboList" aria-live="polite"></section>
+
+    <p class="count" id="count"></p>
+    <section class="place-list" id="placeList" aria-live="polite"></section>
   </main>
 
   <footer>Made with ❤️ — hẹn hò vui vẻ nha em</footer>
-
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <script src="data.js"></script>
   <script src="app.js"></script>
