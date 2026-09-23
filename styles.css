@@ -120,7 +120,7 @@ body {
 main {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 14px 16px 40px;
+  padding: 14px 16px 60px;
 }
 
 .search-row {
@@ -331,13 +331,6 @@ main {
 .empty span {
   font-size: 13.5px;
   font-weight: 400;
-  color: var(--muted);
-}
-
-footer {
-  padding: 0 20px 44px;
-  text-align: center;
-  font-size: 13px;
   color: var(--muted);
 }
 
