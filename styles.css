@@ -63,6 +63,14 @@ body {
   color: var(--accent);
 }
 
+.hero-sub {
+  margin: 10px auto 0;
+  max-width: 560px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
 .tabs {
   position: sticky;
   top: 0;
@@ -343,6 +351,10 @@ main {
 @media (max-width: 420px) {
   .hero {
     padding: 34px 18px 18px;
+  }
+
+  .hero-sub {
+    font-size: 14px;
   }
 
   .tab {
