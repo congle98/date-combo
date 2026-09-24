@@ -2,7 +2,7 @@
 
 const COMBO_DATA = require("./data.js");
 
-const EXPECTED = { bbq: 30, mixed: 30, drinks: 26 };
+const EXPECTED = { bbq: 30, mixed: 37, drinks: 31 };
 const errors = [];
 
 const tabs = Object.values(COMBO_DATA);
