@@ -59,8 +59,7 @@
 
     media +=
       '<span class="place-emoji" aria-hidden="true">' + tab.emoji + "</span>" +
-      '<span class="place-num">' + num + "</span>" +
-      (item.isNew ? '<span class="place-new" title="Quán mới thêm">⭐</span>' : "");
+      '<span class="place-num">' + num + "</span>";
 
     return (
       '<a class="place-card' + (item.photo ? "" : " is-placeholder") + '" href="' + mapsUrl(item) + '" target="_blank" rel="noopener">' +
