@@ -1,63 +1,44 @@
 "use strict";
 
 const COMBO_DATA = require("./data.js");
-
-const EXPECTED = { bbq: 30, mixed: 37, drinks: 31 };
+const fs = require("fs");
+const path = require("path");
+const EXPECTED = { food: 100, drinks: 100, special: 60, activities: 60, gifts: 90, getaway: 60 };
 const errors = [];
 
-const tabs = Object.values(COMBO_DATA);
-
-if (tabs.length !== 3) {
-  errors.push(`Expected 3 tabs, found ${tabs.length}`);
-}
-
-tabs.forEach((tab) => {
-  if (!tab.id || !tab.label || !tab.emoji) {
-    errors.push(`Tab "${tab.id || "?"}" missing id/label/emoji`);
-  }
-  if (!Array.isArray(tab.items)) {
-    errors.push(`Tab "${tab.id}" has no items array`);
+Object.entries(EXPECTED).forEach(([id, expected]) => {
+  const group = COMBO_DATA[id];
+  if (!group) {
+    errors.push(`Missing group: ${id}`);
     return;
   }
-  const expected = EXPECTED[tab.id];
-  if (expected && tab.items.length !== expected) {
-    errors.push(`Tab "${tab.id}" has ${tab.items.length} items, expected ${expected}`);
+  if (group.items.length !== expected) {
+    errors.push(`${id} has ${group.items.length} records; expected ${expected}`);
   }
 
-  tab.items.forEach((item, index) => {
-    const label = `[${tab.id}] item ${index + 1}`;
-
-    ["name", "address", "desc"].forEach((field) => {
-      if (!item[field] || String(item[field]).trim() === "") {
-        errors.push(`${label}: ${field} is empty`);
-      }
+  const seen = new Set();
+  group.items.forEach((item, index) => {
+    const label = `[${id}] item ${index + 1}`;
+    ["name", "address", "desc", "subcategory", "source", "photo", "photoSource", "photoSourceUrl"].forEach((field) => {
+      if (!item[field] || String(item[field]).trim() === "") errors.push(`${label}: ${field} is empty`);
     });
-
-    if (item.photo && !/^https:\/\/lh3\.googleusercontent\.com\/gps-cs-s\//.test(item.photo)) {
-      errors.push(`${label}: unexpected photo URL`);
-    }
-
-    const url =
-      "https://www.google.com/maps/search/?api=1&query=" +
-      encodeURIComponent(`${item.name} ${item.address} Hà Nội`);
-    if (!url.startsWith("https://www.google.com/maps/search/")) {
-      errors.push(`${label}: bad maps url`);
-    }
+    const key = `${item.name.toLowerCase()}|${item.address.toLowerCase()}`;
+    if (seen.has(key)) errors.push(`${label}: duplicate name/address`);
+    seen.add(key);
+    if (item.sourceUrl && !/^https:\/\//.test(item.sourceUrl)) errors.push(`${label}: sourceUrl is not HTTPS`);
+    if (item.photoSourceUrl && !/^https:\/\//.test(item.photoSourceUrl)) errors.push(`${label}: photoSourceUrl is not HTTPS`);
+    if (item.photo && /^https:\/\//.test(item.photo)) errors.push(`${label}: photo should be a local downloaded image`);
+    if (item.photo && !fs.existsSync(path.join(__dirname, item.photo))) errors.push(`${label}: local photo file is missing: ${item.photo}`);
   });
 });
 
-if (errors.length > 0) {
+if (errors.length) {
   console.error(`FAIL — ${errors.length} problem(s):`);
-  errors.forEach((e) => console.error(`  - ${e}`));
+  errors.forEach((error) => console.error(`  - ${error}`));
   process.exit(1);
 }
 
-const total = tabs.reduce((sum, tab) => sum + tab.items.length, 0);
-const withPhoto = tabs.reduce(
-  (sum, tab) => sum + tab.items.filter((i) => i.photo).length,
-  0
-);
-console.log(`OK — ${tabs.length} tabs, ${total} items, ${withPhoto} with photos, maps links valid`);
-tabs.forEach((tab) => {
-  console.log(`  ${tab.emoji} ${tab.label}: ${tab.items.length} items`);
+console.log("OK — category counts and place records match the date-guide targets.");
+Object.entries(EXPECTED).forEach(([id, expected]) => {
+  console.log(`  ${COMBO_DATA[id].emoji} ${COMBO_DATA[id].label}: ${COMBO_DATA[id].items.length}/${expected}`);
 });

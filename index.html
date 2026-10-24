@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Trung thu bên bé Hồng · Cầu Giấy</title>
-  <meta name="description" content="78 địa điểm ăn uống quanh Cầu Giấy — đồ nướng, đồ tổng hợp và quán nước. Bấm để mở Google Maps." />
+  <title>Hẹn Đi Đâu · Cẩm nang hẹn hò</title>
+  <meta name="description" content="Cẩm nang lên lịch hẹn: địa điểm ăn uống, trải nghiệm, hoa quà và chuyến đi quanh Hà Nội." />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💛</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,8 +13,10 @@
 </head>
 <body>
   <header class="hero">
-    <p class="hero-kicker">🥮 Trung thu bên bé Hồng 🐰</p>
-    <p class="hero-sub">Em chọn, còn lại để anh lo 🤧</p>
+    <p class="hero-kicker">HẸN ĐI ĐÂU <span>✳</span></p>
+    <h1>Lên kèo hẹn hò, <em>để mình lo.</em></h1>
+    <p class="hero-sub">Một cuốn sổ bỏ túi cho những buổi hẹn có tâm — từ quán ăn quen đến chuyến đi xa.</p>
+    <div class="hero-note"><span>01</span> Chọn mood <b>→</b> <span>02</span> Chọn khu vực <b>→</b> <span>03</span> Có kèo rồi!</div>
   </header>
 
   <nav class="tabs" id="tabs" aria-label="Chọn danh sách địa điểm"></nav>
@@ -26,14 +28,20 @@
         <input
           id="searchInput"
           type="search"
-          placeholder="Tìm theo tên quán, đường, mô tả..."
+          placeholder="Tìm quán, món ăn, con phố..."
           autocomplete="off"
           aria-label="Tìm kiếm địa điểm"
         />
         <button id="searchClear" class="search-clear" type="button" aria-label="Xoá tìm kiếm" hidden>✕</button>
       </div>
+      <label class="area-filter"><span>📍</span><select id="areaSelect" aria-label="Lọc theo khu vực"><option value="">Mọi khu vực</option><option value="Cầu Giấy">Cầu Giấy</option><option value="Hoàn Kiếm">Hoàn Kiếm</option><option value="Ba Đình">Ba Đình</option><option value="Tây Hồ">Tây Hồ</option><option value="Đống Đa">Đống Đa</option><option value="Hai Bà Trưng">Hai Bà Trưng</option><option value="Thanh Xuân">Thanh Xuân</option><option value="Hoàng Mai">Hoàng Mai</option><option value="Long Biên">Long Biên</option><option value="Gia Lâm">Gia Lâm</option><option value="Nam Từ Liêm">Nam Từ Liêm</option><option value="Bắc Từ Liêm">Bắc Từ Liêm</option><option value="Sóc Sơn">Sóc Sơn</option><option value="Ba Vì">Ba Vì</option><option value="Ninh Bình">Ninh Bình</option><option value="Quảng Ninh">Quảng Ninh</option><option value="Hải Phòng">Hải Phòng</option><option value="Lào Cai">Lào Cai</option><option value="Tuyên Quang">Tuyên Quang</option><option value="Cao Bằng">Cao Bằng</option><option value="Thanh Hóa">Thanh Hóa</option><option value="Sơn La">Sơn La</option><option value="Phú Thọ">Phú Thọ</option><option value="Trần Thái Tông">Trần Thái Tông</option><option value="Xuân Thủy">Xuân Thủy</option><option value="Trung Hòa">Trung Hòa</option><option value="Nguyễn Khang">Nguyễn Khang</option></select></label>
+    </div>
+    <div class="facet-row">
+      <label><span>Danh mục nhỏ</span><select id="subcategorySelect" aria-label="Lọc theo danh mục nhỏ"><option value="">Tất cả danh mục</option></select></label>
+      <label><span>Ngân sách / người</span><select id="budgetSelect" aria-label="Lọc theo ngân sách"><option value="">Mọi mức giá</option><option value="0-100000">Đến 100.000đ</option><option value="100000-250000">100.000–250.000đ</option><option value="250000-500000">250.000–500.000đ</option><option value="500000-99999999">Trên 500.000đ</option></select></label>
     </div>
 
+    <section class="date-intro"><div><span class="eyebrow">HẸN HÒ KHÔNG CẦN ĐAU ĐẦU</span><h2>Một buổi hẹn vui bắt đầu từ <em>một ý tưởng nhỏ.</em></h2></div><p>Chọn một danh mục bên dưới để tìm địa điểm hoặc lấy cảm hứng. Nhớ hỏi sở thích, ngân sách và lịch của người ấy trước khi chốt nhé.</p></section>
     <p class="count" id="count"></p>
     <section class="place-list" id="placeList" aria-live="polite"></section>
   </main>
