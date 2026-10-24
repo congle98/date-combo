@@ -31,7 +31,8 @@
     var budget = true;
     if (budgetSelect.value) {
       var bounds = budgetSelect.value.split("-").map(Number);
-      budget = item.priceMin !== null && item.priceMin !== undefined && item.priceMax !== null && item.priceMax !== undefined && item.priceMin <= bounds[1] && item.priceMax >= bounds[0];
+      var priceMax = item.priceMax === null || item.priceMax === undefined ? Number.POSITIVE_INFINITY : item.priceMax;
+      budget = item.priceMin !== null && item.priceMin !== undefined && item.priceMin <= bounds[1] && priceMax >= bounds[0];
     }
     return (!keyword || text.indexOf(normalize(keyword)) !== -1) && inRegion && category && budget;
   }
@@ -64,11 +65,14 @@
     media += '<span class="place-num">' + num + '</span>';
     var priceBasis = item.priceBasis || ({food:"chi tiêu / người",drinks:"đồ uống, bánh hoặc món / người",special:"chi tiêu / người",activities:"vé hoặc trải nghiệm / người",gifts:"giá / món quà",getaway:"vé vào cửa / người"}[tab.id] || "tham khảo");
     var priceText = item.priceMin === 0 && item.priceMax != null ? 'đến ' + item.priceMax.toLocaleString("vi-VN") : item.priceMax !== null && item.priceMax !== undefined ? item.priceMin.toLocaleString("vi-VN") + '–' + item.priceMax.toLocaleString("vi-VN") : 'từ ' + item.priceMin.toLocaleString("vi-VN");
-    var price = item.priceMin !== null && item.priceMin !== undefined ? '<span class="place-meta">Giá tham khảo: ' + priceText + 'đ <small>(' + escapeHtml(priceBasis) + ')</small></span>' : '<span class="place-meta">Giá: chưa có mức công khai để đối chiếu</span>';
+    var priceLabel = item.priceStatus === "estimate" ? 'Ước tính ngân sách: ≈ ' : item.priceStatus === "partial-estimate" ? 'Giá sàn công khai, trần ước tính: ' : item.priceStatus === "official" ? 'Giá tại địa điểm: ' : item.priceStatus === "menu" ? 'Menu thương hiệu: ' : item.priceStatus === "menu-reference" ? 'Menu tham khảo: ' : item.priceStatus === "maps" ? 'Google Maps ghi nhận: ' : 'Mức tham khảo: ';
+    var price = item.priceMin !== null && item.priceMin !== undefined ? '<span class="place-meta">' + priceLabel + priceText + 'đ <small>(' + escapeHtml(priceBasis) + ')</small></span>' : '<span class="place-meta">Giá: chưa có mức công khai để đối chiếu</span>';
     var source = item.sourceUrl ? '<a class="source-link" href="' + escapeHtml(item.sourceUrl) + '" target="_blank" rel="noopener">Nguồn: ' + escapeHtml(item.source) + '</a>' : '<span class="source-link">Nguồn: dữ liệu cũ · cần kiểm tra lại</span>';
-    var priceSource = item.priceSourceUrl ? '<a class="source-link" href="' + escapeHtml(item.priceSourceUrl) + '" target="_blank" rel="noopener">Nguồn giá: Google Maps ↗</a>' : '';
+    var priceSourceLabel = item.priceStatus === "maps" ? "Nguồn giá Google Maps" : item.priceStatus === "estimate" || item.priceStatus === "partial-estimate" ? "Căn cứ phân khúc · mức đối chiếu" : item.priceStatus === "menu-reference" ? "Menu tham khảo của thương hiệu" : "Nguồn giá / menu";
+    var pricePrimarySource = item.pricePrimarySourceUrl ? '<a class="source-link" href="' + escapeHtml(item.pricePrimarySourceUrl) + '" target="_blank" rel="noopener">Nguồn giá sàn ↗</a>' : '';
+    var priceSource = item.priceSourceUrl ? '<a class="source-link" href="' + escapeHtml(item.priceSourceUrl) + '" target="_blank" rel="noopener">' + priceSourceLabel + ' ↗</a>' : '';
     var photoSource = item.photo && item.photoSourceUrl ? '<a class="photo-credit" href="' + escapeHtml(item.photoSourceUrl) + '" target="_blank" rel="noopener">Ảnh: ' + escapeHtml(item.photoSource || "Google Maps") + ' ↗</a>' : "";
-    return '<article class="place-card' + (item.photo ? "" : " is-placeholder") + '"><a class="place-open" href="' + mapsUrl(item.name + " " + item.address) + '" target="_blank" rel="noopener"><span class="place-media">' + media + '</span><span class="place-info"><span class="place-name">' + escapeHtml(item.name) + '</span><span class="place-addr">📍 ' + escapeHtml(item.address) + '</span><span class="place-desc">' + escapeHtml(item.desc) + '</span>' + price + '<span class="place-cta">Mở trên Google Maps ↗</span></span></a>' + photoSource + priceSource + source + '</article>';
+    return '<article class="place-card' + (item.photo ? "" : " is-placeholder") + '"><a class="place-open" href="' + mapsUrl(item.name + " " + item.address) + '" target="_blank" rel="noopener"><span class="place-media">' + media + '</span><span class="place-info"><span class="place-name">' + escapeHtml(item.name) + '</span><span class="place-addr">📍 ' + escapeHtml(item.address) + '</span><span class="place-desc">' + escapeHtml(item.desc) + '</span>' + price + '<span class="place-cta">Mở trên Google Maps ↗</span></span></a>' + photoSource + pricePrimarySource + priceSource + source + '</article>';
   }
   function ideaHtml(item) {
     return '<article class="idea-card"><span class="idea-icon">' + item.emoji + '</span><div><h2>' + escapeHtml(item.label) + '</h2><p>' + escapeHtml(item.desc) + '</p><span class="idea-budget">' + escapeHtml(item.budget) + '</span><a href="' + mapsUrl(item.query) + '" target="_blank" rel="noopener">Khám phá trên bản đồ ↗</a></div></article>';

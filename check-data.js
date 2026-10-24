@@ -29,6 +29,10 @@ Object.entries(EXPECTED).forEach(([id, expected]) => {
     if (item.photoSourceUrl && !/^https:\/\//.test(item.photoSourceUrl)) errors.push(`${label}: photoSourceUrl is not HTTPS`);
     if (item.photo && /^https:\/\//.test(item.photo)) errors.push(`${label}: photo should be a local downloaded image`);
     if (item.photo && !fs.existsSync(path.join(__dirname, item.photo))) errors.push(`${label}: local photo file is missing: ${item.photo}`);
+    if (!Number.isFinite(item.priceMin) || item.priceMin < 0) errors.push(`${label}: priceMin is missing or invalid`);
+    if (!Number.isFinite(item.priceMax) || item.priceMax < item.priceMin) errors.push(`${label}: priceMax is missing or below priceMin`);
+    if (!item.priceBasis || !item.priceStatus) errors.push(`${label}: price basis/status is missing`);
+    if (!item.priceSourceUrl || !/^https:\/\//.test(item.priceSourceUrl)) errors.push(`${label}: priceSourceUrl is missing or not HTTPS`);
   });
 });
 

@@ -1,5 +1,8 @@
 if (typeof module !== "undefined" && module.exports && typeof require === "function") {
-  var COMBO_MAP_PRICE_DATA = require("./price-data.js");
+  var COMBO_PRICE_DATA_BUNDLE = require("./price-data.js");
+  var COMBO_MAP_PRICE_DATA = COMBO_PRICE_DATA_BUNDLE.maps;
+  var COMBO_VERIFIED_PRICE_DATA = COMBO_PRICE_DATA_BUNDLE.verified;
+  var COMBO_PRICE_RULES = COMBO_PRICE_DATA_BUNDLE.rules;
 }
 
 const COMBO_DATA = {
@@ -1776,12 +1779,64 @@ if (typeof COMBO_MAP_PRICE_DATA !== "undefined") {
       item.priceMin = price.priceMin;
       item.priceMax = price.priceMax;
     }
-    item.priceBasis = price.category === "gifts" ? "tham khảo / món · Google Maps" :
-      price.category === "activities" || price.category === "getaway" ? "tham khảo / người · Google Maps" :
-      "chi tiêu tham khảo / người · Google Maps";
+    item.priceBasis = "chi tiêu tham khảo / người · Google Maps";
     item.priceSourceUrl = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(item.name + " " + item.address);
+    item.priceStatus = "maps";
   });
 }
+
+// Prefer venue-specific menus and published ticket prices over category estimates.
+if (typeof COMBO_VERIFIED_PRICE_DATA !== "undefined") {
+  COMBO_VERIFIED_PRICE_DATA.forEach(function (price) {
+    var group = COMBO_DATA[price.category];
+    if (!group) return;
+    var items = group.items.filter(function (candidate) {
+      return price.namePattern ? price.namePattern.test(candidate.name) : candidate.name === price.name;
+    });
+    items.forEach(function (item) {
+      item.priceMin = price.priceMin;
+      item.priceMax = price.priceMax;
+      item.priceBasis = price.priceBasis;
+      item.priceStatus = price.priceStatus;
+      item.priceSourceUrl = price.priceSourceUrl;
+    });
+  });
+}
+
+// Every venue gets an explicit planning range. Estimated ranges stay visibly
+// separate from venue-specific prices so users can still budget without mistaking
+// an estimate for a current menu or ticket price.
+Object.keys(COMBO_DATA).forEach(function (category) {
+  var group = COMBO_DATA[category];
+  group.items.forEach(function (item) {
+    if (item.priceMin == null) {
+      var rules = COMBO_PRICE_RULES && COMBO_PRICE_RULES[category];
+      var rule = rules && (rules[item.subcategory] || rules._default);
+      if (rule) {
+        item.priceMin = rule.min;
+        item.priceMax = rule.max;
+        item.priceBasis = rule.basis;
+        item.priceStatus = "estimate";
+        item.priceSourceUrl = rule.url;
+      }
+    } else if (item.priceMax == null) {
+      var maxRules = COMBO_PRICE_RULES && COMBO_PRICE_RULES[category];
+      var maxRule = maxRules && (maxRules[item.subcategory] || maxRules._default);
+      if (maxRule) {
+        item.pricePrimarySourceUrl = item.priceSourceUrl || item.sourceUrl;
+        item.priceMax = Math.max(item.priceMin, maxRule.max);
+        item.priceBasis = (item.priceBasis || "giá từ nguồn") + "; trần là ước tính theo nhóm dịch vụ";
+        item.priceStatus = "partial-estimate";
+        item.priceSourceUrl = maxRule.url;
+      }
+    }
+    if (item.priceMin != null && !item.priceBasis) {
+      item.priceBasis = ({food:"chi tiêu / người",drinks:"đồ uống hoặc món / người",special:"chi tiêu / người",activities:"vé hoặc hoạt động / người",gifts:"giá / món quà",getaway:"vé/hoạt động tại điểm / người"})[category];
+    }
+    if (item.priceMin != null && !item.priceStatus) item.priceStatus = "published";
+    if (item.priceMin != null && !item.priceSourceUrl && item.sourceUrl) item.priceSourceUrl = item.sourceUrl;
+  });
+});
 
 if (typeof module !== "undefined" && module.exports) {
   module.exports = COMBO_DATA;

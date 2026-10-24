@@ -1448,4 +1448,132 @@ var COMBO_MAP_PRICE_DATA = [
     "rangesFound": 2
   }
 ];
-if (typeof module !== "undefined" && module.exports) module.exports = COMBO_MAP_PRICE_DATA;
+var COMBO_VERIFIED_PRICE_DATA = [
+  { category:"activities", name:"Văn Miếu – Quốc Tử Giám", priceMin:70000, priceMax:70000, priceBasis:"vé người lớn / người", priceStatus:"official", priceSourceUrl:"https://www.vanmieu.gov.vn/vi/introduction/visitor-information" },
+  { category:"activities", name:"Bảo tàng Phụ nữ Việt Nam", priceMin:40000, priceMax:40000, priceBasis:"vé tham quan / người lớn", priceStatus:"published", priceSourceUrl:"https://vietnam.travel/things-to-do/11-must-see-attractions-ha-noi" },
+  { category:"activities", name:"Di tích Nhà tù Hỏa Lò", priceMin:50000, priceMax:50000, priceBasis:"vé tham quan / người lớn", priceStatus:"published", priceSourceUrl:"https://hoalo.vn/" },
+  { category:"activities", name:"Bảo tàng Mỹ thuật Việt Nam", priceMin:40000, priceMax:40000, priceBasis:"vé vào cửa / người lớn; vé trẻ em và học sinh khác mức", priceStatus:"official", priceSourceUrl:"https://vnfam.vn/vi/tham-quan" },
+  { category:"activities", name:"Bảo tàng Lịch sử Quốc gia", priceMin:40000, priceMax:40000, priceBasis:"vé vào cửa / người lớn; có mức giảm theo đối tượng", priceStatus:"official", priceSourceUrl:"https://baotanglichsu.vn/vi/Articles/3108/ve-va-le-phi" },
+  { category:"activities", name:"Bảo tàng Hồ Chí Minh", priceMin:40000, priceMax:40000, priceBasis:"vé tham quan / người lớn", priceStatus:"published", priceSourceUrl:"https://vietnam.travel/things-to-do/best-museums-vietnam" },
+  { category:"activities", name:"Hoàng thành Thăng Long", priceMin:100000, priceMax:100000, priceBasis:"vé vào cửa / người lớn; trẻ dưới 16 tuổi miễn phí", priceStatus:"official", priceSourceUrl:"https://hoangthanhthanglong.vn/thong-bao-thau-doi-gia-ve-tham-quan-hoang-thanh-thang-long/" },
+  { category:"activities", name:"Nhà hát Múa rối Thăng Long", priceMin:100000, priceMax:350000, priceBasis:"vé xem biểu diễn / người", priceStatus:"published", priceSourceUrl:"https://thanglongwaterpuppet.com/" },
+  { category:"getaway", name:"My Hill – Khu sinh thái hồ Đồng Quan", priceMin:40000, priceMax:60000, priceBasis:"vé trong ngày / qua đêm / người; chưa gồm lều", priceStatus:"published", priceSourceUrl:"https://mia.vn/cam-nang-du-lich/ho-dong-quan-13144" },
+  { category:"getaway", name:"Khu sinh thái Bản Rõm", priceMin:50000, priceMax:50000, priceBasis:"vé vào cửa tham khảo / người lớn; chưa gồm dịch vụ", priceStatus:"estimate", priceSourceUrl:"https://gonow.com.vn/ban-rom/" },
+  { category:"getaway", name:"Rose Park", priceMin:75000, priceMax:75000, priceBasis:"vé người lớn / người", priceStatus:"estimate", priceSourceUrl:"https://www.greensm.com/vn-vi/news/cong-vien-hoa-hong-rose-park-long-bien" },
+  { category:"getaway", name:"Khoang Xanh Suối Tiên", priceMin:200000, priceMax:200000, priceBasis:"vé người lớn / người; dịch vụ riêng tính thêm", priceStatus:"official", priceSourceUrl:"https://khoangxanhsuoitien.com.vn/" },
+  { category:"getaway", name:"Tràng An Scenic Landscape Complex", priceMin:250000, priceMax:300000, priceBasis:"vé thuyền tham quan / người lớn", priceStatus:"estimate", priceSourceUrl:"https://www.ninhbinh.gov.vn/" },
+  { category:"getaway", name:"Tam Cốc – Bích Động", priceMin:120000, priceMax:250000, priceBasis:"vé tham quan và đò / người; tùy lựa chọn", priceStatus:"estimate", priceSourceUrl:"https://vietnam.travel/" },
+  { category:"getaway", name:"Hang Múa", priceMin:100000, priceMax:100000, priceBasis:"vé tham quan / người", priceStatus:"estimate", priceSourceUrl:"https://vietnam.travel/" },
+  { category:"getaway", name:"Thung Nham Bird Park", priceMin:150000, priceMax:250000, priceBasis:"vé gói tham quan cơ bản / người; tùy tuyến", priceStatus:"official", priceSourceUrl:"https://thungnham.com/wp-content/uploads/2026/01/01-FIT-BANG-BAO-GIA-DICH-VU-THAM-QUAN-NAM-2026-.pdf" },
+  { category:"getaway", name:"Cầu kính Bạch Long", priceMin:550000, priceMax:800000, priceBasis:"vé trải nghiệm / người; tùy gói", priceStatus:"estimate", priceSourceUrl:"https://bachlonggl.com/" },
+  { category:"getaway", name:"Yên Tử", priceMin:350000, priceMax:400000, priceBasis:"vé cáp treo khứ hồi / người; tùy tuyến", priceStatus:"estimate", priceSourceUrl:"https://yentu.com.vn/" },
+  { category:"getaway", name:"Thác Dải Yếm", priceMin:50_000, priceMax:100_000, priceBasis:"vé tham quan / người; hoạt động riêng tính thêm", priceStatus:"estimate", priceSourceUrl:"https://mocchautourism.com/" },
+  { category:"getaway", name:"Rừng thông Bản Áng", priceMin:60_000, priceMax:100_000, priceBasis:"vé tham quan / người; hoạt động riêng tính thêm", priceStatus:"estimate", priceSourceUrl:"https://mocchautourism.com/" },
+  { category:"drinks", namePattern:/^TocoToco$/, priceMin:30000, priceMax:45000, priceBasis:"một ly; mức menu thương hiệu (size/topping làm thay đổi giá)", priceStatus:"menu", priceSourceUrl:"https://tocotocotea.com/product-tag/tocotoco/" },
+  { category:"drinks", namePattern:/^KOI Thé/, priceMin:36000, priceMax:125000, priceBasis:"một ly; khoảng menu KOI Thé tham khảo, chi nhánh có thể khác", priceStatus:"menu-reference", priceSourceUrl:"https://aeonmall-binhtan.com.vn/thuc-don/thuc-don-koi-the" },
+  { category:"drinks", namePattern:/^Highlands Coffee/, priceMin:14000, priceMax:99000, priceBasis:"món/đồ uống trong menu chuỗi; giá tại quán có thể đổi theo khu vực", priceStatus:"menu", priceSourceUrl:"https://www.highlandscoffee.com.vn/vn/thuc-don.html" },
+  { category:"drinks", namePattern:/^The Coffee House/, priceMin:19000, priceMax:105000, priceBasis:"món/đồ uống trong menu chuỗi; giá tham khảo", priceStatus:"menu", priceSourceUrl:"https://info.thecoffeehouse.com/collections/all" },
+  { category:"drinks", namePattern:/^ACID8 Specialty Coffee/, priceMin:40000, priceMax:105000, priceBasis:"một món/ly; menu tại quán, loại hạt làm thay đổi giá", priceStatus:"official", priceSourceUrl:"https://www.acid8coffee.com/" },
+  { category:"drinks", namePattern:/^Saint Honoré/, priceMin:20000, priceMax:350000, priceBasis:"món bánh/đồ uống; khoảng giá menu tiệm, bánh nguyên chiếc có thể cao hơn", priceStatus:"menu", priceSourceUrl:"https://sainthonore.com.vn/bakery/" },
+  { category:"drinks", namePattern:/^La Paris/, priceMin:40000, priceMax:550000, priceBasis:"món bánh đến bánh nguyên chiếc; khoảng danh mục sản phẩm", priceStatus:"menu", priceSourceUrl:"https://www.laparis.com.vn/" },
+  { category:"drinks", namePattern:/^Gia Trịnh/, priceMin:6500, priceMax:645000, priceBasis:"bánh lẻ đến hộp/set; khoảng giá sản phẩm trực tuyến", priceStatus:"official", priceSourceUrl:"https://giatrinhbakery.com.vn/" },
+  { category:"drinks", namePattern:/^Maison Marou/, priceMin:50000, priceMax:550000, priceBasis:"đồ uống/bánh lẻ đến bánh nguyên chiếc; tham khảo danh mục thương hiệu", priceStatus:"menu-reference", priceSourceUrl:"https://www.maisonmarou.com/collections/cakes-pastries" },
+  { category:"special", name:"Gia Restaurant", priceMin:2500000, priceMax:3500000, priceBasis:"tasting menu / người; trưa 2,5 triệu, tối 3,5 triệu chưa thuế/phí", priceStatus:"official", priceSourceUrl:"https://www.gia-hanoi.com/menu" },
+  { category:"special", name:"Hibana by Koki", priceMin:3500000, priceMax:8500000, priceBasis:"tasting menu / người; tùy set, chưa gồm đồ uống, thuế và phí dịch vụ", priceStatus:"official", priceSourceUrl:"https://capellahotels.com/en/hanoi-menu" },
+  { category:"special", name:"Izakaya by Koki", priceMin:70000, priceMax:1950000, priceBasis:"món gọi lẻ / món; menu chưa gồm thuế và phí dịch vụ", priceStatus:"official", priceSourceUrl:"https://capellahotels.com/assets/docs/hanoi/Izakaya_by_Koki_-_A_La_Carte_Menu.pdf" }
+];
+
+var COMBO_PRICE_RULES = {
+  drinks: {
+    "Cà phê": { min:25000, max:200000, basis:"đồ uống hoặc món gọi thêm / người; ước tính theo menu quán cà phê", url:"https://order.thecoffeehouse.com/order" },
+    "Cà phê & bánh ngọt": { min:45000, max:300000, basis:"đồ uống kèm bánh / người; ước tính theo menu quán cà phê", url:"https://sainthonore.com.vn/bakery/" },
+    "Cocktail & bar": { min:200000, max:1000000, basis:"đồ uống và phí vào cửa nếu có / người; ước tính", url:"https://vinwonders.com/en/wonderpedia/news/cocktail-bars-in-hanoi/" },
+    "Lounge & cocktail": { min:300000, max:1200000, basis:"đồ uống / người; ước tính theo phân khúc lounge", url:"https://capellahotels.com/en/hanoi-menu" },
+    "Rooftop & cocktail": { min:250000, max:1000000, basis:"đồ uống / người; ước tính theo phân khúc rooftop", url:"https://capellahotels.com/en/hanoi-menu" },
+    "Trà sữa & trà": { min:30000, max:125000, basis:"một ly / size và topping; tham khảo menu chuỗi", url:"https://aeonmall-binhtan.com.vn/thuc-don/thuc-don-koi-the" },
+    "Tiệm bánh & pâtisserie": { min:20000, max:300000, basis:"bánh và đồ uống cơ bản / người; ước tính theo menu tiệm bánh", url:"https://sainthonore.com.vn/bakery/" },
+    "Bánh Việt & đồ ngọt": { min:6500, max:645000, basis:"món lẻ hoặc hộp/set; tham khảo danh mục sản phẩm", url:"https://giatrinhbakery.com.vn/" },
+    "Bánh ngọt & đồ uống": { min:30000, max:250000, basis:"bánh và đồ uống / người; ước tính theo menu tiệm", url:"https://pablo.com.vn/" },
+    "Chè & đồ ngọt truyền thống": { min:15000, max:150000, basis:"món tráng miệng / người; mức tham khảo", url:"https://www.google.com/maps/search/?api=1&query=che+Ha+Noi" },
+    _default: { min:25000, max:250000, basis:"món hoặc đồ uống / người; ước tính theo nhóm cửa hàng", url:"https://order.thecoffeehouse.com/order" }
+  },
+  food: {
+    "Nướng & BBQ": { min:180000, max:600000, basis:"chi tiêu / người; ước tính theo phân khúc quán nướng", url:"https://www.google.com/maps/search/?api=1&query=BBQ+restaurant+Hanoi" },
+    "Bò & nướng": { min:200000, max:700000, basis:"chi tiêu / người; ước tính theo món gọi", url:"https://www.google.com/maps/search/?api=1&query=BBQ+restaurant+Hanoi" },
+    "Lẩu": { min:150000, max:600000, basis:"chi tiêu / người; phụ thuộc gọi món/combo", url:"https://www.google.com/maps/search/?api=1&query=hotpot+Hanoi" },
+    "Món Nhật": { min:150000, max:1200000, basis:"chi tiêu / người; phụ thuộc gọi món hoặc set", url:"https://guide.michelin.com/vn/en/ha-noi/restaurants" },
+    "Món Hàn": { min:120000, max:600000, basis:"chi tiêu / người; ước tính theo menu nhà hàng", url:"https://www.google.com/maps/search/?api=1&query=Korean+restaurant+Hanoi" },
+    "Món Việt": { min:50000, max:500000, basis:"chi tiêu / người; phụ thuộc món/set gọi", url:"https://guide.michelin.com/vn/en/ha-noi/restaurants" },
+    "Ẩm thực Việt": { min:100000, max:800000, basis:"chi tiêu / người; phụ thuộc món/set gọi", url:"https://guide.michelin.com/vn/en/ha-noi/restaurants" },
+    "Món chay": { min:60000, max:600000, basis:"chi tiêu / người; phụ thuộc gọi món/set", url:"https://guide.michelin.com/vn/en/ha-noi/restaurants" },
+    "Âu & fusion": { min:150000, max:1000000, basis:"chi tiêu / người; ước tính theo món gọi", url:"https://guide.michelin.com/vn/en/ha-noi/restaurants" },
+    "Bún chả": { min:40000, max:150000, basis:"một bữa / người; mức tham khảo", url:"https://guide.michelin.com/en/best-of/where-to-get-the-best-pho-in-hanoi" },
+    "Phở & bún": { min:40000, max:200000, basis:"một bữa / người; mức tham khảo", url:"https://guide.michelin.com/en/best-of/where-to-get-the-best-pho-in-hanoi" },
+    "Cơm Việt": { min:60000, max:250000, basis:"chi tiêu / người; mức tham khảo", url:"https://guide.michelin.com/vn/en/ha-noi/restaurants" },
+    "Hải sản": { min:200000, max:1200000, basis:"chi tiêu / người; tùy loại hải sản và khối lượng", url:"https://guide.michelin.com/vn/en/ha-noi/restaurants" },
+    "Steak & hải sản": { min:500000, max:2500000, basis:"chi tiêu / người; món chính, đồ uống có thể tính thêm", url:"https://guide.michelin.com/vn/en/ha-noi/restaurants" },
+    "Ẩm thực vùng miền": { min:120000, max:800000, basis:"chi tiêu / người; phụ thuộc set và món gọi", url:"https://guide.michelin.com/vn/en/ha-noi/restaurants" },
+    "Pizza & Âu": { min:150000, max:600000, basis:"chi tiêu / người; phụ thuộc món chia sẻ và đồ uống", url:"https://guide.michelin.com/vn/en/ha-noi/restaurants" },
+    "Burger & Âu": { min:100000, max:350000, basis:"món chính và đồ uống / người; mức tham khảo", url:"https://guide.michelin.com/vn/en/ha-noi/restaurants" },
+    "Âu & nướng": { min:250000, max:1200000, basis:"chi tiêu / người; ước tính theo món gọi", url:"https://guide.michelin.com/vn/en/ha-noi/restaurants" },
+    "Nhà hàng & món khác": { min:80000, max:800000, basis:"chi tiêu / người; ước tính theo phân khúc", url:"https://guide.michelin.com/vn/en/ha-noi/restaurants" },
+    "Brunch & Âu": { min:120000, max:600000, basis:"brunch và đồ uống / người; mức tham khảo", url:"https://guide.michelin.com/vn/en/ha-noi/restaurants" },
+    _default: { min:80000, max:600000, basis:"chi tiêu / người; ước tính theo nhóm món", url:"https://guide.michelin.com/vn/en/ha-noi/restaurants" }
+  },
+  activities: {
+    "Escape room": { min:150000, max:450000, basis:"vé trò chơi / người; tùy phòng và số người", url:"https://www.google.com/maps/search/?api=1&query=escape+room+Hanoi" },
+    "Bowling & trò chơi": { min:100000, max:350000, basis:"một lượt chơi / người; giày và giờ cao điểm có thể tính riêng", url:"https://www.google.com/maps/search/?api=1&query=bowling+Hanoi" },
+    "Go-kart & vận động": { min:150000, max:700000, basis:"một lượt hoặc gói chơi / người; tùy số vòng", url:"https://www.google.com/maps/search/?api=1&query=go+kart+Hanoi" },
+    "Bắn cung & vận động": { min:100000, max:350000, basis:"buổi trải nghiệm / người; tùy số lượt", url:"https://www.google.com/maps/search/?api=1&query=archery+Hanoi" },
+    "Nghệ thuật & triển lãm": { min:0, max:200000, basis:"vé triển lãm / người; có chương trình miễn phí và có vé", url:"https://www.google.com/maps/search/?api=1&query=art+gallery+Hanoi" },
+    "Bảo tàng": { min:30000, max:100000, basis:"vé tham quan / người lớn; miễn giảm tùy đối tượng", url:"https://vietnam.travel/things-to-do/11-must-see-attractions-ha-noi" },
+    "Bảo tàng & làng nghề": { min:30000, max:150000, basis:"vé vào cửa / người; workshop hoặc sản phẩm tính riêng", url:"https://vietnam.travel/things-to-do/11-must-see-attractions-ha-noi" },
+    "Workshop thủ công": { min:150000, max:700000, basis:"một buổi trải nghiệm / người; tùy vật liệu và sản phẩm mang về", url:"https://www.vietnamairlines.com/go/vi/plan-book/travel/travel-guide/workshop-lam-gom-ha-noi" },
+    "Workshop": { min:150000, max:700000, basis:"một buổi trải nghiệm / người; tùy vật liệu và sản phẩm mang về", url:"https://www.vietnamairlines.com/go/vi/plan-book/travel/travel-guide/workshop-lam-gom-ha-noi" },
+    "Workshop & lớp trải nghiệm": { min:250000, max:900000, basis:"một buổi lớp / người; tùy nguyên liệu và món học", url:"https://www.google.com/maps/search/?api=1&query=cooking+class+Hanoi" },
+    "Di tích & bảo tàng": { min:0, max:100000, basis:"vé tham quan / người lớn; có điểm miễn phí và giá ưu đãi", url:"https://vietnam.travel/things-to-do/11-must-see-attractions-ha-noi" },
+    "Di tích & văn hóa": { min:0, max:100000, basis:"vé tham quan / người; một số điểm miễn phí", url:"https://www.vanmieu.gov.vn/vi/introduction/visitor-information" },
+    "Biểu diễn nghệ thuật": { min:100000, max:600000, basis:"vé biểu diễn / người; tùy suất và hạng ghế", url:"https://thanglongwaterpuppet.com/" },
+    "Biểu diễn & nghệ thuật": { min:100000, max:600000, basis:"vé biểu diễn / người; tùy suất và hạng ghế", url:"https://thanglongwaterpuppet.com/" },
+    "Rạp chiếu phim": { min:70000, max:250000, basis:"vé xem phim / người; tùy phim, suất và ghế", url:"https://www.cgv.vn/" },
+    "Vui chơi & giải trí": { min:100000, max:800000, basis:"vé hoặc gói trải nghiệm / người; dịch vụ riêng tính thêm", url:"https://vinwonders.com/" },
+    "Không gian sáng tạo": { min:0, max:300000, basis:"vé vào cửa / hoạt động / người; tùy sự kiện", url:"https://www.google.com/maps/search/?api=1&query=creative+space+Hanoi" },
+    "Tour đi bộ": { min:0, max:300000, basis:"tour / người; một số tour dùng tiền tip tự nguyện", url:"https://www.google.com/maps/search/?api=1&query=walking+tour+Hanoi" },
+    _default: { min:50000, max:500000, basis:"vé hoặc hoạt động / người; ước tính theo nhóm trải nghiệm", url:"https://www.google.com/maps/search/?api=1&query=activities+Hanoi" }
+  },
+  getaway: {
+    "Thiên nhiên & hoạt động ngoài trời": { min:0, max:250000, basis:"vé và hoạt động cơ bản tại điểm / người; chưa gồm đi lại, ăn, lưu trú", url:"https://mytour.vn/vi/blog/bai-viet/18-dia-diem-gan-gui-cho-chuyen-du-lich-ha-noi-trong-ngay.html" },
+    "Di tích & làng nghề": { min:0, max:250000, basis:"vé tham quan cơ bản / người; chưa gồm đi lại, ăn, lưu trú", url:"https://vietnam.travel/node/1170" },
+    "Biển & đảo": { min:100000, max:1000000, basis:"vé/hoạt động tại điểm / người; chưa gồm đi lại, ăn, lưu trú", url:"https://vietnam.travel/node/1170" },
+    "Vùng cao & nghỉ dưỡng": { min:0, max:800000, basis:"vé/hoạt động tại điểm / người; chưa gồm đi lại, ăn, lưu trú", url:"https://vietnam.travel/node/1170" },
+    _default: { min:0, max:500000, basis:"vé và hoạt động cơ bản tại điểm / người; chưa gồm đi lại, ăn, lưu trú", url:"https://vietnam.travel/node/1170" }
+  },
+  gifts: {
+    "Hoa tươi & điện hoa": { min:190000, max:1300000, basis:"một bó hoa thiết kế / bó; đối chiếu giá bán lẻ tại Hà Nội, lễ/tùy mùa có thể cao hơn", url:"https://hoathanhnha.com/shop-hoa-tuoi-quan-dong-da/?sort=price-asc" },
+    "Thiết kế & đồ thủ công": { min:50000, max:1500000, basis:"món quà thủ công / món; ước tính theo loại sản phẩm", url:"https://vinwonders.com/en/wonderpedia/news/souvenir-shops-in-hanoi/" },
+    "Quà lưu niệm & đồ thủ công": { min:50000, max:1500000, basis:"món quà / món; ước tính theo loại sản phẩm", url:"https://vinwonders.com/en/wonderpedia/news/souvenir-shops-in-hanoi/" },
+    "Quà tặng & đồ lưu niệm": { min:50000, max:1500000, basis:"món quà / món; ước tính theo loại sản phẩm", url:"https://vinwonders.com/en/wonderpedia/news/souvenir-shops-in-hanoi/" },
+    "Đồ lưu niệm & đặc sản": { min:30000, max:800000, basis:"đặc sản hoặc món lưu niệm / món; ước tính", url:"https://vinwonders.com/en/wonderpedia/news/souvenir-shops-in-hanoi/" },
+    "Đặc sản & đồ ăn": { min:30000, max:800000, basis:"hộp/quà đặc sản / món; tùy khối lượng và thương hiệu", url:"https://vinwonders.com/en/wonderpedia/news/souvenir-shops-in-hanoi/" },
+    "Đồ chơi & sở thích": { min:50000, max:2000000, basis:"món đồ chơi/phụ kiện sở thích / món; tùy dòng sản phẩm", url:"https://www.google.com/maps/search/?api=1&query=hobby+shop+Hanoi" },
+    "Thời trang & phụ kiện": { min:100000, max:3000000, basis:"phụ kiện hoặc món thời trang / món; tùy thương hiệu", url:"https://www.google.com/maps/search/?api=1&query=gift+fashion+store+Hanoi" },
+    "Sách & văn phòng phẩm": { min:20000, max:800000, basis:"sách hoặc bộ quà văn phòng phẩm / món; tùy sản phẩm", url:"https://www.google.com/maps/search/?api=1&query=bookstore+Hanoi" },
+    "Quà lưu niệm & đồ thủ công": { min:50000, max:1500000, basis:"món quà / món; ước tính theo loại sản phẩm", url:"https://vinwonders.com/en/wonderpedia/news/souvenir-shops-in-hanoi/" },
+    _default: { min:30000, max:1500000, basis:"món quà / món; ước tính theo nhóm cửa hàng", url:"https://vinwonders.com/en/wonderpedia/news/souvenir-shops-in-hanoi/" }
+  },
+  special: {
+    "Michelin & fine dining": { min:1000000, max:5000000, basis:"chi tiêu / người; tasting menu, pairing và thuế có thể tính thêm", url:"https://capellahotels.com/en/hanoi-menu" },
+    "Ẩm thực Việt đặc biệt": { min:300000, max:1500000, basis:"chi tiêu / người; tùy món và đồ uống", url:"https://guide.michelin.com/vn/en/ha-noi/restaurants" },
+    "Nhà hàng khách sạn cao cấp": { min:500000, max:3000000, basis:"chi tiêu / người; buffet/set, đồ uống và thuế có thể tính riêng", url:"https://www.marriott.com/en-us/hotels/hanjw-jw-marriott-hotel-hanoi/dining/" },
+    "Lounge & cocktail": { min:300000, max:1500000, basis:"đồ uống/món nhẹ / người; tùy món và sự kiện", url:"https://capellahotels.com/en/hanoi-menu" },
+    "Rooftop & cocktail": { min:300000, max:1500000, basis:"đồ uống/món nhẹ / người; tùy món và khung giờ", url:"https://capellahotels.com/en/hanoi-menu" },
+    "Trà chiều & lounge": { min:500000, max:1800000, basis:"trà chiều hoặc đồ uống / người; gói/set có thể tính cho hai khách", url:"https://capellahotels.com/en/hanoi-menu" },
+    _default: { min:500000, max:3000000, basis:"chi tiêu / người; ước tính theo phân khúc dịp đặc biệt", url:"https://guide.michelin.com/vn/en/ha-noi/restaurants" }
+  }
+};
+
+if (typeof module !== "undefined" && module.exports) module.exports = {
+  maps: COMBO_MAP_PRICE_DATA,
+  verified: COMBO_VERIFIED_PRICE_DATA,
+  rules: COMBO_PRICE_RULES
+};
