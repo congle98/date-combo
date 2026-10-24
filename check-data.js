@@ -3,7 +3,7 @@
 const COMBO_DATA = require("./data.js");
 const fs = require("fs");
 const path = require("path");
-const EXPECTED = { food: 100, drinks: 100, special: 60, activities: 60, gifts: 90, getaway: 60 };
+const EXPECTED = { food: 100, drinks: 130, special: 60, activities: 60, gifts: 90, getaway: 60 };
 const errors = [];
 
 Object.entries(EXPECTED).forEach(([id, expected]) => {
