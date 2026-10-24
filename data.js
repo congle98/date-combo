@@ -1,3 +1,7 @@
+if (typeof module !== "undefined" && module.exports && typeof require === "function") {
+  var COMBO_MAP_PRICE_DATA = require("./price-data.js");
+}
+
 const COMBO_DATA = {
   bbq: {
     id: "bbq",
@@ -1756,6 +1760,28 @@ COMBO_DATA.flowers.items.forEach(function (item) {
 });
 COMBO_DATA.gifts.items = COMBO_DATA.flowers.items.concat(COMBO_DATA.gifts.items);
 delete COMBO_DATA.flowers;
+
+// Google Maps publishes a per-person spend range for a subset of these venues.
+// Add those observed ranges only where our existing source has no usable range.
+// Prices remain estimates because menus and branch pricing change over time.
+if (typeof COMBO_MAP_PRICE_DATA !== "undefined") {
+  COMBO_MAP_PRICE_DATA.forEach(function (price) {
+    var group = COMBO_DATA[price.category];
+    if (!group) return;
+    var item = group.items.find(function (candidate) {
+      return candidate.name === price.name && candidate.address === price.address;
+    });
+    if (!item) return;
+    if (item.priceMin == null || item.priceMax == null) {
+      item.priceMin = price.priceMin;
+      item.priceMax = price.priceMax;
+    }
+    item.priceBasis = price.category === "gifts" ? "tham khảo / món · Google Maps" :
+      price.category === "activities" || price.category === "getaway" ? "tham khảo / người · Google Maps" :
+      "chi tiêu tham khảo / người · Google Maps";
+    item.priceSourceUrl = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(item.name + " " + item.address);
+  });
+}
 
 if (typeof module !== "undefined" && module.exports) {
   module.exports = COMBO_DATA;
