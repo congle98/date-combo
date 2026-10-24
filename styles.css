@@ -463,10 +463,17 @@ main { padding-top:22px; }
 .gift-advice-card { padding:15px; border:1px solid var(--line); border-radius:10px; background:#fff; }
 .gift-advice-card h3 { margin:0 0 7px; font-size:14px; }
 .gift-advice-card p { margin:0; color:var(--muted); font-size:12px; line-height:1.65; }
+.gift-advice-card .gift-advice-context { margin:0 0 11px; color:#8c6846; font-size:11px; font-weight:600; }
 .gift-advice-card ul { margin:0; padding-left:17px; color:var(--muted); font-size:12px; line-height:1.65; }
 .gift-advice-card li { margin:0 0 7px; }
 .gift-advice-card li strong { color:var(--ink); }
 .gift-advice-card .gift-advice-note { margin-top:11px; padding-top:9px; border-top:1px solid var(--line); font-size:11px; }
+.dating-tips { grid-column:1/-1; margin-bottom:8px; padding:24px; border:1px solid var(--line); border-radius:14px; background:#f5f8f3; }
+.dating-tips-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; }
+.dating-tip-card { padding:15px; border:1px solid var(--line); border-radius:10px; background:#fff; }
+.dating-tip-card h3 { margin:0 0 8px; font-size:14px; }
+.dating-tip-card ul { margin:0; padding-left:17px; color:var(--muted); font-size:12px; line-height:1.65; }
+.dating-tip-card li { margin-bottom:7px; }
 @media(max-width:600px) { .hero { padding:34px 20px 25px; }.hero-note { gap:7px; font-size:9px; }.search-row { flex-direction:column; }.area-filter { min-height:42px; }.area-filter select { flex:1; max-width:none; }.facet-row { flex-direction:column; }.facet-row label { justify-content:space-between; }.facet-row select { flex:1; max-width:none; }.date-intro { display:block; padding-top:20px; }.date-intro>p { margin-top:10px; }.idea-card { grid-template-columns:54px 1fr; gap:12px; padding:17px; }.idea-icon { width:48px; height:48px; font-size:24px; }.idea-card h2 { font-size:18px; } }
-@media(max-width:760px) { .gift-advice { padding:17px; }.gift-advice-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
-@media(max-width:480px) { .gift-advice-grid { grid-template-columns:1fr; } }
+@media(max-width:760px) { .gift-advice,.dating-tips { padding:17px; }.gift-advice-grid,.dating-tips-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:480px) { .gift-advice-grid,.dating-tips-grid { grid-template-columns:1fr; } }
