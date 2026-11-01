@@ -7,6 +7,7 @@
   var tabs = foodTabs.concat(ideas.filter(function (idea) { return !COMBO_DATA[idea.id]; }));
   var tabsEl = document.getElementById("tabs");
   var listEl = document.getElementById("placeList");
+  var paginationEl = document.getElementById("pagination");
   var countEl = document.getElementById("count");
   var searchInput = document.getElementById("searchInput");
   var searchClear = document.getElementById("searchClear");
@@ -15,6 +16,8 @@
   var budgetSelect = document.getElementById("budgetSelect");
   var activeTabId = "all";
   var keyword = "";
+  var currentPage = 1;
+  var pageSize = 16;
 
   function escapeHtml(value) {
     return String(value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
@@ -64,8 +67,8 @@
     var media = item.photo ? '<img class="place-img" src="' + escapeHtml(item.photo) + '" alt="' + escapeHtml(item.name) + '" loading="lazy" />' : '<span class="place-image-note no-photo">Chưa có ảnh từ Maps hoặc nguồn chính thức</span>';
     media += '<span class="place-num">' + num + '</span>';
     var itemUrl = item.product ? (item.productUrl || item.sourceUrl) : mapsUrl(item.name + " " + item.address);
-    var addressHtml = item.product ? '<span class="place-addr">🎁 Gợi ý quà tặng · Nước hoa nam</span>' : '<span class="place-addr">📍 ' + escapeHtml(item.address) + '</span>';
-    var subcategoryHtml = item.product ? '<span class="place-meta">Nhóm mùi: ' + escapeHtml(item.subcategory.replace(/^Nước hoa nam · /, "")) + '</span>' : '';
+    var addressHtml = item.product ? '<span class="place-addr">🎁 Gợi ý quà tặng · ' + escapeHtml(item.genderLabel || "Nước hoa nam") + '</span>' : '<span class="place-addr">📍 ' + escapeHtml(item.address) + '</span>';
+    var subcategoryHtml = item.product ? '<span class="place-meta">Nhóm mùi: ' + escapeHtml(item.subcategory.replace(/^Nước hoa (nam|nữ) · /, "")) + '</span>' : '';
     var priceBasis = item.priceBasis || ({food:"chi tiêu / người",drinks:"đồ uống, bánh hoặc món / người",special:"chi tiêu / người",activities:"vé hoặc trải nghiệm / người",gifts:"giá / món quà",getaway:"vé vào cửa / người"}[tab.id] || "tham khảo");
     var isFreePrice = item.priceMin === 0 && item.priceMax === 0;
     var priceText = isFreePrice ? 'miễn phí' : item.priceMin === 0 && item.priceMax != null ? 'đến ' + item.priceMax.toLocaleString("vi-VN") : item.priceMax !== null && item.priceMax !== undefined ? item.priceMin.toLocaleString("vi-VN") + '–' + item.priceMax.toLocaleString("vi-VN") : 'từ ' + item.priceMin.toLocaleString("vi-VN");
@@ -158,6 +161,52 @@
     ];
     return '<section class="dating-tips"><div class="gift-advice-heading"><span>TIPS TÌNH YÊU & HẸN HÒ</span><p>Những điều nhỏ giúp buổi hẹn thoải mái, tôn trọng và dễ nhớ với cả hai người.</p></div><div class="dating-tips-grid">' + tips.map(function (row) { return '<article class="dating-tip-card"><h3>' + escapeHtml(row[0]) + '</h3><ul>' + row[1].map(function (tip) { return '<li>' + escapeHtml(tip) + '</li>'; }).join('') + '</ul></article>'; }).join('') + '</div></section>';
   }
+  function renderPagination(totalItems) {
+    var pageCount = Math.ceil(totalItems / pageSize);
+    paginationEl.innerHTML = "";
+    paginationEl.hidden = pageCount <= 1;
+    if (pageCount <= 1) return pageCount || 1;
+
+    function addButton(label, page, options) {
+      var button = document.createElement("button");
+      button.type = "button";
+      button.className = "page-button" + (options.current ? " active" : "");
+      button.textContent = label;
+      button.disabled = Boolean(options.disabled);
+      button.setAttribute("aria-label", options.ariaLabel || "Trang " + page);
+      if (options.current) button.setAttribute("aria-current", "page");
+      button.addEventListener("click", function () {
+        currentPage = page;
+        renderList();
+        listEl.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+      paginationEl.appendChild(button);
+    }
+    function addGap() {
+      var gap = document.createElement("span");
+      gap.className = "page-gap";
+      gap.textContent = "…";
+      paginationEl.appendChild(gap);
+    }
+
+    addButton("← Trước", Math.max(1, currentPage - 1), { disabled: currentPage === 1, ariaLabel: "Trang trước" });
+    var start = Math.max(1, currentPage - 2);
+    var end = Math.min(pageCount, start + 4);
+    start = Math.max(1, end - 4);
+    if (start > 1) {
+      addButton("1", 1, { current: currentPage === 1 });
+      if (start > 2) addGap();
+    }
+    for (var page = start; page <= end; page += 1) {
+      addButton(String(page), page, { current: page === currentPage });
+    }
+    if (end < pageCount) {
+      if (end < pageCount - 1) addGap();
+      addButton(String(pageCount), pageCount, { current: currentPage === pageCount });
+    }
+    addButton("Sau →", Math.min(pageCount, currentPage + 1), { disabled: currentPage === pageCount, ariaLabel: "Trang sau" });
+    return pageCount;
+  }
   function renderTabs() {
     tabsEl.innerHTML = "";
     [{ id: "all", emoji: "✨", label: "Tất cả" }].concat(tabs).forEach(function (tab) {
@@ -165,7 +214,7 @@
       btn.type = "button"; btn.className = "tab" + (tab.id === activeTabId ? " active" : "");
       btn.textContent = tab.emoji + " " + tab.label;
       btn.setAttribute("aria-pressed", tab.id === activeTabId ? "true" : "false");
-      btn.addEventListener("click", function () { activeTabId = tab.id; document.body.dataset.tab = tab.id; renderTabs(); renderList(); });
+      btn.addEventListener("click", function () { activeTabId = tab.id; currentPage = 1; document.body.dataset.tab = tab.id; renderTabs(); renderList(); });
       tabsEl.appendChild(btn);
     });
   }
@@ -174,15 +223,24 @@
     updateSubcategoryOptions(selected);
     if (selected.length && !selected[0].items) {
       listEl.innerHTML = ideaHtml(selected[0]);
+      paginationEl.innerHTML = "";
+      paginationEl.hidden = true;
       countEl.textContent = "Ý tưởng để bạn bắt đầu lên kế hoạch";
     } else {
       var items = [];
       selected.forEach(function (tab) { tab.items.filter(matches).forEach(function (item) { items.push({ item: item, tab: tab }); }); });
-      listEl.innerHTML = items.length ? items.map(function (entry, index) { return cardHtml(entry.item, index, entry.tab); }).join("") : '<div class="empty">Chưa tìm thấy gợi ý phù hợp<span>Thử khu vực hoặc từ khoá khác nhé.</span></div>';
+      var pageCount = Math.max(1, Math.ceil(items.length / pageSize));
+      currentPage = Math.min(currentPage, pageCount);
+      var pageItems = items.slice((currentPage - 1) * pageSize, currentPage * pageSize);
+      listEl.innerHTML = pageItems.length ? pageItems.map(function (entry, index) { return cardHtml(entry.item, (currentPage - 1) * pageSize + index, entry.tab); }).join("") : '<div class="empty">Chưa tìm thấy gợi ý phù hợp<span>Thử khu vực hoặc từ khoá khác nhé.</span></div>';
       var categoryTab = selected.length === 1 ? selected[0] : null;
       var target = categoryTab ? categoryTab.items.length : null;
       if (categoryTab && categoryTab.id === "gifts") listEl.insertAdjacentHTML("afterbegin", giftAdviceHtml());
-      countEl.textContent = categoryTab ? items.length + " / " + target + " địa điểm trong danh mục · " + (keyword || areaSelect.value || subcategorySelect.value || budgetSelect.value ? "đang áp dụng bộ lọc" : "giá và giờ mở cửa nên được xác nhận") : items.length + " gợi ý tổng hợp · giá và giờ mở cửa nên được xác nhận trước buổi hẹn";
+      renderPagination(items.length);
+      var firstItem = items.length ? (currentPage - 1) * pageSize + 1 : 0;
+      var lastItem = Math.min(currentPage * pageSize, items.length);
+      var pageSummary = items.length ? "Hiển thị " + firstItem + "–" + lastItem + " trên " + items.length + " kết quả · trang " + currentPage + "/" + pageCount : "Không có kết quả phù hợp";
+      countEl.textContent = categoryTab ? items.length + " / " + target + " " + (categoryTab.id === "gifts" ? "gợi ý quà tặng" : "địa điểm") + " · " + pageSummary : items.length + " gợi ý tổng hợp · " + pageSummary;
       Array.prototype.forEach.call(listEl.querySelectorAll("img.place-img"), function (img) {
         img.addEventListener("error", function () {
           var card = img.closest(".place-card");
@@ -194,10 +252,10 @@
     }
     searchClear.hidden = !keyword;
   }
-  searchInput.addEventListener("input", function () { keyword = searchInput.value.trim(); renderList(); });
-  searchClear.addEventListener("click", function () { searchInput.value = ""; keyword = ""; renderList(); searchInput.focus(); });
-  areaSelect.addEventListener("change", renderList);
-  subcategorySelect.addEventListener("change", renderList);
-  budgetSelect.addEventListener("change", renderList);
+  searchInput.addEventListener("input", function () { keyword = searchInput.value.trim(); currentPage = 1; renderList(); });
+  searchClear.addEventListener("click", function () { searchInput.value = ""; keyword = ""; currentPage = 1; renderList(); searchInput.focus(); });
+  areaSelect.addEventListener("change", function () { currentPage = 1; renderList(); });
+  subcategorySelect.addEventListener("change", function () { currentPage = 1; renderList(); });
+  budgetSelect.addEventListener("change", function () { currentPage = 1; renderList(); });
   renderTabs(); renderList();
 })();

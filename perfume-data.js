@@ -16,7 +16,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 6500000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://www.my-origines.com/fr/bleu-de-chanel-18417X01.html"
+    "priceSourceUrl": "https://www.my-origines.com/fr/bleu-de-chanel-18417X01.html",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "Dior Sauvage EDP",
@@ -35,7 +36,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 5500000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://sensabeauty.com/products/dior-sauvage-for-men-edp"
+    "priceSourceUrl": "https://sensabeauty.com/products/dior-sauvage-for-men-edp",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "YSL Y EDP",
@@ -54,7 +56,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 4500000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://beautyhouse.com/products/yves-saint-laurent-y-eau-de-parfum-for-men"
+    "priceSourceUrl": "https://beautyhouse.com/products/yves-saint-laurent-y-eau-de-parfum-for-men",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "Versace Dylan Blue EDT",
@@ -73,7 +76,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 3000000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://www.primor.eu/es_es/versace-dylan-blue-pour-homme-edt-112347.html"
+    "priceSourceUrl": "https://www.primor.eu/es_es/versace-dylan-blue-pour-homme-edt-112347.html",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "Montblanc Explorer EDP",
@@ -92,7 +96,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 3500000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://fragrancelounge.com/products/mont-blanc-explorer-eau-de-parfum-100-ml"
+    "priceSourceUrl": "https://fragrancelounge.com/products/mont-blanc-explorer-eau-de-parfum-100-ml",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "Armani Acqua di Gio Profondo EDP",
@@ -111,7 +116,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 4500000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://www.nykaa.com/giorgio-armani-acqua-di-gio-profondo-eau-de-parfum/p/17915110"
+    "priceSourceUrl": "https://www.nykaa.com/giorgio-armani-acqua-di-gio-profondo-eau-de-parfum/p/17915110",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "D&G Light Blue Eau Intense Pour Homme EDP",
@@ -130,7 +136,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 4500000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://www.goldenscent.com/en/p/dolce-gabbana-light-blue-eau-intense-perfume-eau-de-parfum-for-men.html?action=prod&id=6921"
+    "priceSourceUrl": "https://www.goldenscent.com/en/p/dolce-gabbana-light-blue-eau-intense-perfume-eau-de-parfum-for-men.html?action=prod&id=6921",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "Versace Pour Homme EDT",
@@ -149,7 +156,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 3000000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://www.ceneo.pl/1985636"
+    "priceSourceUrl": "https://www.ceneo.pl/1985636",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "Davidoff Cool Water EDT",
@@ -168,7 +176,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 2000000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://paguchi.am/product/davidoff-cool-water/"
+    "priceSourceUrl": "https://paguchi.am/product/davidoff-cool-water/",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "Bvlgari Aqva Pour Homme EDT",
@@ -187,7 +196,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 3500000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://myoras.com/products/bvlgari-aqva-pour-homme-eau-de-toilette"
+    "priceSourceUrl": "https://myoras.com/products/bvlgari-aqva-pour-homme-eau-de-toilette",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "Louis Vuitton Imagination EDP",
@@ -206,7 +216,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 15000000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://www.kaufland.de/product/549058806/"
+    "priceSourceUrl": "https://www.kaufland.de/product/549058806/",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "Chanel Allure Homme Edition Blanche EDP",
@@ -225,7 +236,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 6500000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://www.douglas.lv/lv/katalogs/chanel-allure-homme-dition-blanche/"
+    "priceSourceUrl": "https://www.douglas.lv/lv/katalogs/chanel-allure-homme-dition-blanche/",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "Dior Homme Cologne",
@@ -244,7 +256,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 4500000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://www.fragrancereview.com/perfume/dior-dior-homme-cologne-2013/"
+    "priceSourceUrl": "https://www.fragrancereview.com/perfume/dior-dior-homme-cologne-2013/",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "Acqua di Parma Colonia EDC",
@@ -263,7 +276,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 6000000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://glamma.fi/acqua-di-parma-colonia-edc-20ml"
+    "priceSourceUrl": "https://glamma.fi/acqua-di-parma-colonia-edc-20ml",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "Hermes Un Jardin sur le Nil EDT",
@@ -282,7 +296,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 4500000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://www.sephora.fr/p/un-jardin-sur-le-nil---eau-de-toilette-P1626036.html"
+    "priceSourceUrl": "https://www.sephora.fr/p/un-jardin-sur-le-nil---eau-de-toilette-P1626036.html",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "Prada L’Homme EDT",
@@ -301,7 +316,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 4500000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://www.ulta.com/p/lhomme-eau-de-toilette-pimprod2056031?sku=2651844"
+    "priceSourceUrl": "https://www.ulta.com/p/lhomme-eau-de-toilette-pimprod2056031?sku=2651844",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "Prada Amber Pour Homme EDT",
@@ -320,7 +336,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 4000000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://www.perfumeplusoutlet.com/products/prada-amber-pour-homme-for-men-by-prada-eau-de-toilette-spray-3-4-oz"
+    "priceSourceUrl": "https://www.perfumeplusoutlet.com/products/prada-amber-pour-homme-for-men-by-prada-eau-de-toilette-spray-3-4-oz",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "Dior Homme 2020 EDT",
@@ -339,7 +356,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 5000000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://www.raspiv.md/ru/catalog/man/dior-homme-2020-eau-de-toilette"
+    "priceSourceUrl": "https://www.raspiv.md/ru/catalog/man/dior-homme-2020-eau-de-toilette",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "Narciso Rodriguez for Him Bleu Noir EDP",
@@ -358,7 +376,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 4500000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://www.breuninger.com/de/marken/narciso-rodriguez/for-him-bleu-noir/1000783725/p/"
+    "priceSourceUrl": "https://www.breuninger.com/de/marken/narciso-rodriguez/for-him-bleu-noir/1000783725/p/",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "Maison Margiela Replica Lazy Sunday Morning EDT",
@@ -377,7 +396,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 5000000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://chelseanose.com/product/maison-margiela-lazy-sunday-morning-edt-30ml-100ml/8587/"
+    "priceSourceUrl": "https://chelseanose.com/product/maison-margiela-lazy-sunday-morning-edt-30ml-100ml/8587/",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "Hermes Terre d’Hermes EDT",
@@ -396,7 +416,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 5000000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://www.myer.com.au/p/terre-dhermes-edt-608080530-382781050"
+    "priceSourceUrl": "https://www.myer.com.au/p/terre-dhermes-edt-608080530-382781050",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "Tom Ford Grey Vetiver EDP",
@@ -415,7 +436,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 6500000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://www.parfumdreams.co.uk/Tom-Ford/Fragrance/Signature/Eau-de-Parfum-Spray/index_122633.aspx"
+    "priceSourceUrl": "https://www.parfumdreams.co.uk/Tom-Ford/Fragrance/Signature/Eau-de-Parfum-Spray/index_122633.aspx",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "Guerlain Vétiver EDT",
@@ -434,7 +456,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 4500000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://escentual.com/products/guerlain-vetiver-eau-de-toilette-spray?variant=49266296160580"
+    "priceSourceUrl": "https://escentual.com/products/guerlain-vetiver-eau-de-toilette-spray?variant=49266296160580",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "Lalique Encre Noire EDT",
@@ -453,7 +476,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 2000000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://parfumgallerie.ca/products/lalique-encre-noire-pour-homme-eau-de-parfum"
+    "priceSourceUrl": "https://parfumgallerie.ca/products/lalique-encre-noire-pour-homme-eau-de-parfum",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "Diptyque Tam Dao EDP",
@@ -472,7 +496,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 8000000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://www.riah.ae/en/product/ra-26837/tam-dao-eau-de-parfum-for-women-and-men-diptyque"
+    "priceSourceUrl": "https://www.riah.ae/en/product/ra-26837/tam-dao-eau-de-parfum-for-women-and-men-diptyque",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "Chanel Platinum Égoïste EDT",
@@ -491,7 +516,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 5500000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://www.douglas.lv/lv/katalogs/chanel-platinum-go-ste/"
+    "priceSourceUrl": "https://www.douglas.lv/lv/katalogs/chanel-platinum-go-ste/",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "Tom Ford Beau de Jour EDP",
@@ -510,7 +536,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 8000000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://www.smellattractiveperfumes.com/perfumes/niche/tom-ford-beau-de-jour-edp-100ml.html"
+    "priceSourceUrl": "https://www.smellattractiveperfumes.com/perfumes/niche/tom-ford-beau-de-jour-edp-100ml.html",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "Creed Green Irish Tweed EDP",
@@ -529,7 +556,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 11000000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://beautytribe.com/products/creed-green-irish-tweed-edp-100ml"
+    "priceSourceUrl": "https://beautytribe.com/products/creed-green-irish-tweed-edp-100ml",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "Dior Eau Sauvage EDT",
@@ -548,7 +576,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 5000000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://mtunda.com/products/christian-dior-eau-sauvage-m-edt-100ml"
+    "priceSourceUrl": "https://mtunda.com/products/christian-dior-eau-sauvage-m-edt-100ml",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "Chanel Égoïste EDT",
@@ -567,7 +596,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 5500000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://almaycasa.co.il/products/chanel-egoiste-edt"
+    "priceSourceUrl": "https://almaycasa.co.il/products/chanel-egoiste-edt",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "D&G The One for Men EDP",
@@ -586,7 +616,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 4000000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://belvish.com/products/dolce-gabbana-the-one-edp-for-men"
+    "priceSourceUrl": "https://belvish.com/products/dolce-gabbana-the-one-edp-for-men",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "YSL La Nuit de L’Homme EDT",
@@ -605,7 +636,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 4500000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://www.allbeauty.com/yves-saint-laurent-la-nuit-de-lhomme-eau-de-toilette-spray-100ml/11791432.html"
+    "priceSourceUrl": "https://www.allbeauty.com/yves-saint-laurent-la-nuit-de-lhomme-eau-de-toilette-spray-100ml/11791432.html",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "Dior Homme Intense EDP",
@@ -624,7 +656,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 5500000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://vuahanghieu.com/nuoc-hoa-nam-dior-homme-eau-de-parfum-intense-100ml-ph166311"
+    "priceSourceUrl": "https://vuahanghieu.com/nuoc-hoa-nam-dior-homme-eau-de-parfum-intense-100ml-ph166311",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "Givenchy Gentleman Réserve Privée EDP",
@@ -643,7 +676,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 4500000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://editorspick.com/products/givenchy-gentleman-reserve-privee-eau-de-parfum"
+    "priceSourceUrl": "https://editorspick.com/products/givenchy-gentleman-reserve-privee-eau-de-parfum",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "Tom Ford Noir Extreme EDP",
@@ -662,7 +696,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 8000000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://www.justmylook.com/products/tom-ford-noir-extreme-eau-de-parfum-50ml"
+    "priceSourceUrl": "https://www.justmylook.com/products/tom-ford-noir-extreme-eau-de-parfum-50ml",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "Jean Paul Gaultier Le Male Le Parfum",
@@ -681,7 +716,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 5000000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://www.douglas.nl/nl/p/5002490497"
+    "priceSourceUrl": "https://www.douglas.nl/nl/p/5002490497",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "Azzaro The Most Wanted EDP Intense",
@@ -700,7 +736,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 5000000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://nwadrmqtnyati.com/ar/azzaro-the-most-wanted-eau-de-parfum-intense-men-100ml/p1411737090"
+    "priceSourceUrl": "https://nwadrmqtnyati.com/ar/azzaro-the-most-wanted-eau-de-parfum-intense-men-100ml/p1411737090",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "Viktor&Rolf Spicebomb Extreme EDP",
@@ -719,7 +756,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 5000000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://www.next.co.uk/style/su473745/af1405"
+    "priceSourceUrl": "https://www.next.co.uk/style/su473745/af1405",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "Versace Eros EDP",
@@ -738,7 +776,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 4000000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://escentual.com/products/versace-eros-eau-de-parfum-spray"
+    "priceSourceUrl": "https://escentual.com/products/versace-eros-eau-de-parfum-spray",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "Armani Stronger With You Intensely EDP",
@@ -757,7 +796,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 5000000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://www.emporium.az/en/products/giorgio-armani-stronger-with-you-intensely-eau-de-parfum-330701"
+    "priceSourceUrl": "https://www.emporium.az/en/products/giorgio-armani-stronger-with-you-intensely-eau-de-parfum-330701",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "Tom Ford Tobacco Vanille EDP",
@@ -776,7 +816,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 13000000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://www.marieclaire.com/beauty/best-vanilla-perfumes/"
+    "priceSourceUrl": "https://www.marieclaire.com/beauty/best-vanilla-perfumes/",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "Parfums de Marly Herod EDP",
@@ -795,7 +836,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 11000000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://noahgrooming.co.nz/products/parfums-de-marly-herod-edp"
+    "priceSourceUrl": "https://noahgrooming.co.nz/products/parfums-de-marly-herod-edp",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "Maison Margiela Replica Jazz Club EDT",
@@ -814,7 +856,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 5000000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://www.my-origines.com/gb/jazz-club-59L18X02.html"
+    "priceSourceUrl": "https://www.my-origines.com/gb/jazz-club-59L18X02.html",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "Kilian Angels’ Share EDP",
@@ -833,7 +876,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 13000000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://www.peonymelbourne.com.au/products/angels-share-100ml"
+    "priceSourceUrl": "https://www.peonymelbourne.com.au/products/angels-share-100ml",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "MFK Grand Soir EDP",
@@ -852,7 +896,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 12000000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://www.neimanmarcus.com/p/maison-francis-kurkdjian-grand-soir-eau-de-parfum-6-8-oz-prod204640530"
+    "priceSourceUrl": "https://www.neimanmarcus.com/p/maison-francis-kurkdjian-grand-soir-eau-de-parfum-6-8-oz-prod204640530",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "Tom Ford Ombré Leather EDP",
@@ -871,7 +916,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 8000000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://www.ubuy.tn/en/product/4RWESDY-tom-ford-ombre-leather-by-tom-ford-for-women-1-7-oz-edp-spray-1-7-oz-clear"
+    "priceSourceUrl": "https://www.ubuy.tn/en/product/4RWESDY-tom-ford-ombre-leather-by-tom-ford-for-women-1-7-oz-edp-spray-1-7-oz-clear",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "Tom Ford Tuscan Leather EDP",
@@ -890,7 +936,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 13000000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://www.stockmann.lv/lv-lv/tom-ford-private-blend-tuscan-leather-edp-smarzudens/1416814010.html"
+    "priceSourceUrl": "https://www.stockmann.lv/lv-lv/tom-ford-private-blend-tuscan-leather-edp-smarzudens/1416814010.html",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "Memo African Leather EDP",
@@ -909,7 +956,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 10000000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://www.essenza.ng/products/memo-paris-african-leather-african-leather-eau-de-parfum"
+    "priceSourceUrl": "https://www.essenza.ng/products/memo-paris-african-leather-african-leather-eau-de-parfum",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "Amouage Interlude Man EDP",
@@ -928,7 +976,8 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 12000000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://www.boozt.com/se/sv/amouage/amouage-interlude-man-edp-100ml_32573466"
+    "priceSourceUrl": "https://www.boozt.com/se/sv/amouage/amouage-interlude-man-edp-100ml_32573466",
+    "genderLabel": "Nước hoa nam"
   },
   {
     "name": "Maison Margiela Replica By the Fireplace EDT",
@@ -947,7 +996,1011 @@ var COMBO_MENS_PERFUMES = [
     "priceMax": 5000000,
     "priceBasis": "chai 50–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
     "priceStatus": "estimate",
-    "priceSourceUrl": "https://decantplanet.com/products/maison-martin-margiela-by-the-fireplace"
+    "priceSourceUrl": "https://decantplanet.com/products/maison-martin-margiela-by-the-fireplace",
+    "genderLabel": "Nước hoa nam"
   }
 ];
-if (typeof module !== "undefined" && module.exports) module.exports = COMBO_MENS_PERFUMES;
+var COMBO_WOMENS_PERFUMES = [
+  {
+    "name": "Chanel Chance Eau Tendre EDP",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Trái cây, hồng, nhài, xạ hương; mềm, thanh. Hợp dùng: Đi làm, hẹn ban ngày. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Tươi mát, nhẹ nhàng",
+    "photo": "assets/photos/perfume-women-01.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://perfumediary.com/perfumes/chanel-chance-eau-tendre-eau-de-parfum/",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://perfumediary.com/perfumes/chanel-chance-eau-tendre-eau-de-parfum/",
+    "productUrl": "https://perfumediary.com/perfumes/chanel-chance-eau-tendre-eau-de-parfum/",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 3500000,
+    "priceMax": 6500000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://perfumediary.com/perfumes/chanel-chance-eau-tendre-eau-de-parfum/"
+  },
+  {
+    "name": "Dior Miss Dior Blooming Bouquet EDT",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Mẫu đơn, hoa hồng, xạ hương; trong trẻo. Hợp dùng: Đi chơi, hẹn hò. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Tươi mát, nhẹ nhàng",
+    "photo": "assets/photos/perfume-women-02.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://shopatshams.com.pk/products/christian-dior-miss-dior-blooming-bouquet-edt-100ml",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://shopatshams.com.pk/products/christian-dior-miss-dior-blooming-bouquet-edt-100ml",
+    "productUrl": "https://shopatshams.com.pk/products/christian-dior-miss-dior-blooming-bouquet-edt-100ml",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 2500000,
+    "priceMax": 5000000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://shopatshams.com.pk/products/christian-dior-miss-dior-blooming-bouquet-edt-100ml"
+  },
+  {
+    "name": "D&G Light Blue EDT",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Chanh, táo xanh, gỗ; sáng và mát. Hợp dùng: Ngày nóng, du lịch. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Tươi mát, nhẹ nhàng",
+    "photo": "assets/photos/perfume-women-03.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://www.chemistwarehouse.com.au/buy/157496/dolce-gabbana-for-women-light-blue-eau-de-toilette-100ml-new",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://www.chemistwarehouse.com.au/buy/157496/dolce-gabbana-for-women-light-blue-eau-de-toilette-100ml-new",
+    "productUrl": "https://www.chemistwarehouse.com.au/buy/157496/dolce-gabbana-for-women-light-blue-eau-de-toilette-100ml-new",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 2000000,
+    "priceMax": 4000000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://www.chemistwarehouse.com.au/buy/157496/dolce-gabbana-for-women-light-blue-eau-de-toilette-100ml-new"
+  },
+  {
+    "name": "Versace Bright Crystal EDT",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Yuzu, lựu, mẫu đơn; mát, nữ tính. Hợp dùng: Hằng ngày. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Tươi mát, nhẹ nhàng",
+    "photo": "assets/photos/perfume-women-04.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://www.ulta.com/p/bright-crystal-eau-de-toilette-VP12312?sku=2596411",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://www.ulta.com/p/bright-crystal-eau-de-toilette-VP12312?sku=2596411",
+    "productUrl": "https://www.ulta.com/p/bright-crystal-eau-de-toilette-VP12312?sku=2596411",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 1500000,
+    "priceMax": 3500000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://www.ulta.com/p/bright-crystal-eau-de-toilette-VP12312?sku=2596411"
+  },
+  {
+    "name": "Lanvin Éclat d’Arpège EDP",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Tử đinh hương, trà, xạ hương; dịu, sạch. Hợp dùng: Công sở, đi học. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Tươi mát, nhẹ nhàng",
+    "photo": "assets/photos/perfume-women-05.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://www.fragranceoutlet.com/products/lanvin-eclat-d-arpege-womens-eau-de-parfum-spray",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://www.fragranceoutlet.com/products/lanvin-eclat-d-arpege-womens-eau-de-parfum-spray",
+    "productUrl": "https://www.fragranceoutlet.com/products/lanvin-eclat-d-arpege-womens-eau-de-parfum-spray",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 1000000,
+    "priceMax": 2500000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://www.fragranceoutlet.com/products/lanvin-eclat-d-arpege-womens-eau-de-parfum-spray"
+  },
+  {
+    "name": "Marc Jacobs Daisy Eau So Fresh EDT",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Lê, mâm xôi, hoa nhẹ; tươi vui. Hợp dùng: Dạo phố, ban ngày. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Trái cây vui tươi",
+    "photo": "assets/photos/perfume-women-06.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://makeup.kz/product/20544/",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://makeup.kz/product/20544/",
+    "productUrl": "https://makeup.kz/product/20544/",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 2500000,
+    "priceMax": 5000000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://makeup.kz/product/20544/"
+  },
+  {
+    "name": "Burberry Her EDP",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Quả mọng, dâu, xạ hương; ngọt, hiện đại. Hợp dùng: Đi chơi, hẹn hò. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Trái cây vui tươi",
+    "photo": "assets/photos/perfume-women-07.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://www.lookfantastic.ie/p/burberry-her-eau-de-parfum-100ml/12044922/",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://www.lookfantastic.ie/p/burberry-her-eau-de-parfum-100ml/12044922/",
+    "productUrl": "https://www.lookfantastic.ie/p/burberry-her-eau-de-parfum-100ml/12044922/",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 3000000,
+    "priceMax": 5500000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://www.lookfantastic.ie/p/burberry-her-eau-de-parfum-100ml/12044922/"
+  },
+  {
+    "name": "Jo Malone English Pear & Freesia Cologne",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Lê, lan Nam Phi, gỗ nhẹ; thanh và sáng. Hợp dùng: Công sở, ban ngày. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Trái cây vui tươi",
+    "photo": "assets/photos/perfume-women-08.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://www.nykaa.com/jo-malone-london-cologne-duo-english-pear-freesia-cologne-wood-sage-sea-salt-travel-spray/p/27057644",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://www.nykaa.com/jo-malone-london-cologne-duo-english-pear-freesia-cologne-wood-sage-sea-salt-travel-spray/p/27057644",
+    "productUrl": "https://www.nykaa.com/jo-malone-london-cologne-duo-english-pear-freesia-cologne-wood-sage-sea-salt-travel-spray/p/27057644",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 3500000,
+    "priceMax": 6000000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://www.nykaa.com/jo-malone-london-cologne-duo-english-pear-freesia-cologne-wood-sage-sea-salt-travel-spray/p/27057644"
+  },
+  {
+    "name": "DKNY Be Delicious EDP",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Táo xanh, dưa leo, hoa; giòn, năng động. Hợp dùng: Trời nóng. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Trái cây vui tươi",
+    "photo": "assets/photos/perfume-women-09.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://www.perfumenz.co.nz/products/be-delicious-by-donna-karan-dkny-100ml-edp",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://www.perfumenz.co.nz/products/be-delicious-by-donna-karan-dkny-100ml-edp",
+    "productUrl": "https://www.perfumenz.co.nz/products/be-delicious-by-donna-karan-dkny-100ml-edp",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 1200000,
+    "priceMax": 2800000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://www.perfumenz.co.nz/products/be-delicious-by-donna-karan-dkny-100ml-edp"
+  },
+  {
+    "name": "Nina Ricci Nina EDT",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Táo kẹo, chanh, praline; ngọt tinh nghịch. Hợp dùng: Đi chơi, trời mát. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Trái cây vui tươi",
+    "photo": "assets/photos/perfume-women-10.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://www.lifepharmacy.com/product/nina-ricci-nina-80ml",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://www.lifepharmacy.com/product/nina-ricci-nina-80ml",
+    "productUrl": "https://www.lifepharmacy.com/product/nina-ricci-nina-80ml",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 1300000,
+    "priceMax": 3000000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://www.lifepharmacy.com/product/nina-ricci-nina-80ml"
+  },
+  {
+    "name": "Chloé EDP",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Hồng, mẫu đơn, phấn sạch; nữ tính, gọn gàng. Hợp dùng: Công sở, hằng ngày. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Hoa hồng",
+    "photo": "assets/photos/perfume-women-11.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://felix.com.pa/products/chloe-eau-de-parfum",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://felix.com.pa/products/chloe-eau-de-parfum",
+    "productUrl": "https://felix.com.pa/products/chloe-eau-de-parfum",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 3000000,
+    "priceMax": 5500000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://felix.com.pa/products/chloe-eau-de-parfum"
+  },
+  {
+    "name": "Parfums de Marly Delina EDP",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Hồng, vải, đại hoàng; chua ngọt, nổi bật. Hợp dùng: Hẹn hò, sự kiện. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Hoa hồng",
+    "photo": "assets/photos/perfume-women-12.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://us.parfums-de-marly.com/products/delina",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://us.parfums-de-marly.com/products/delina",
+    "productUrl": "https://us.parfums-de-marly.com/products/delina",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 8000000,
+    "priceMax": 13000000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://us.parfums-de-marly.com/products/delina"
+  },
+  {
+    "name": "Diptyque Eau Rose EDP",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Hồng xanh, vải, cúc; tự nhiên, có chiều sâu. Hợp dùng: Ban ngày. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Hoa hồng",
+    "photo": "assets/photos/perfume-women-13.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://www.perfumenz.co.nz/products/eau-rose-by-diptyque-75ml-edp",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://www.perfumenz.co.nz/products/eau-rose-by-diptyque-75ml-edp",
+    "productUrl": "https://www.perfumenz.co.nz/products/eau-rose-by-diptyque-75ml-edp",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 4500000,
+    "priceMax": 8000000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://www.perfumenz.co.nz/products/eau-rose-by-diptyque-75ml-edp"
+  },
+  {
+    "name": "Jo Malone Red Roses Cologne",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Hoa hồng tươi, lá xanh, chanh; như bó hồng mới cắt. Hợp dùng: Dạo phố, hẹn hò. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Hoa hồng",
+    "photo": "assets/photos/perfume-women-14.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://www.sogo.com.tw/product/021CC1M00000057",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://www.sogo.com.tw/product/021CC1M00000057",
+    "productUrl": "https://www.sogo.com.tw/product/021CC1M00000057",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 3500000,
+    "priceMax": 6000000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://www.sogo.com.tw/product/021CC1M00000057"
+  },
+  {
+    "name": "MFK À la rose EDP",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Hoa hồng, cam chanh, xạ hương; nhẹ, tinh tế. Hợp dùng: Công sở, gặp gỡ. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Hoa hồng",
+    "photo": "assets/photos/perfume-women-15.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://osswald.ch/products/a-la-rose",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://osswald.ch/products/a-la-rose",
+    "productUrl": "https://osswald.ch/products/a-la-rose",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 8000000,
+    "priceMax": 14000000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://osswald.ch/products/a-la-rose"
+  },
+  {
+    "name": "Gucci Bloom EDP",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Huệ, nhài, hoa trắng xanh; vườn hoa đầy đặn. Hợp dùng: Ban ngày, sự kiện. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Hoa trắng",
+    "photo": "assets/photos/perfume-women-16.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://www.ulta.com/p/bloom-eau-de-parfum-xlsImpprod16561034?sku=2515592",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://www.ulta.com/p/bloom-eau-de-parfum-xlsImpprod16561034?sku=2515592",
+    "productUrl": "https://www.ulta.com/p/bloom-eau-de-parfum-xlsImpprod16561034?sku=2515592",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 2500000,
+    "priceMax": 5000000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://www.ulta.com/p/bloom-eau-de-parfum-xlsImpprod16561034?sku=2515592"
+  },
+  {
+    "name": "Armani My Way EDP",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Huệ, hoa cam, vanilla; sáng, hơi ngọt. Hợp dùng: Đi làm, đi chơi. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Hoa trắng",
+    "photo": "assets/photos/perfume-women-17.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://www.faces.sa/ar/p/armani-my-way-eau-de-parfum-PM_GIORGIO_ARMANI_my_way_EDP.html",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://www.faces.sa/ar/p/armani-my-way-eau-de-parfum-PM_GIORGIO_ARMANI_my_way_EDP.html",
+    "productUrl": "https://www.faces.sa/ar/p/armani-my-way-eau-de-parfum-PM_GIORGIO_ARMANI_my_way_EDP.html",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 2500000,
+    "priceMax": 5000000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://www.faces.sa/ar/p/armani-my-way-eau-de-parfum-PM_GIORGIO_ARMANI_my_way_EDP.html"
+  },
+  {
+    "name": "Givenchy L’Interdit EDP",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Hoa trắng, hoắc hương, vetiver; sáng trên nền tối. Hợp dùng: Buổi tối, sự kiện. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Hoa trắng",
+    "photo": "assets/photos/perfume-women-18.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://bulldog.vn/nuoc-hoa/givenchy-l-interdit-edp-80ml.htm",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://bulldog.vn/nuoc-hoa/givenchy-l-interdit-edp-80ml.htm",
+    "productUrl": "https://bulldog.vn/nuoc-hoa/givenchy-l-interdit-edp-80ml.htm",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 2500000,
+    "priceMax": 5000000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://bulldog.vn/nuoc-hoa/givenchy-l-interdit-edp-80ml.htm"
+  },
+  {
+    "name": "Diptyque Do Son EDT",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Huệ, hoa cam, nhài; thanh thoát, hoài niệm. Hợp dùng: Ban ngày, trời dịu. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Hoa trắng",
+    "photo": "assets/photos/perfume-women-19.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://kensapothecary.com.my/products/diptyque-do-son-edt",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://kensapothecary.com.my/products/diptyque-do-son-edt",
+    "productUrl": "https://kensapothecary.com.my/products/diptyque-do-son-edt",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 4000000,
+    "priceMax": 7000000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://kensapothecary.com.my/products/diptyque-do-son-edt"
+  },
+  {
+    "name": "Frédéric Malle Carnal Flower EDP",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Huệ xanh, khuynh diệp, dừa; tự nhiên, mãnh liệt. Hợp dùng: Sự kiện, người mê huệ. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Hoa trắng",
+    "photo": "assets/photos/perfume-women-20.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://latelierdesparfums.jp/products/carnal-flower-edp",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://latelierdesparfums.jp/products/carnal-flower-edp",
+    "productUrl": "https://latelierdesparfums.jp/products/carnal-flower-edp",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 9000000,
+    "priceMax": 16000000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://latelierdesparfums.jp/products/carnal-flower-edp"
+  },
+  {
+    "name": "Narciso Rodriguez For Her EDT",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Xạ hương, hoa cam, gỗ; mềm nhưng có chiều sâu. Hợp dùng: Công sở, hẹn hò. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Xạ hương, phấn, da sạch",
+    "photo": "assets/photos/perfume-women-21.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://soncachua.com/nuoc-hoa-nu-narciso-for-her-edt-full-100ml",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://soncachua.com/nuoc-hoa-nu-narciso-for-her-edt-full-100ml",
+    "productUrl": "https://soncachua.com/nuoc-hoa-nu-narciso-for-her-edt-full-100ml",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 2000000,
+    "priceMax": 4000000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://soncachua.com/nuoc-hoa-nu-narciso-for-her-edt-full-100ml"
+  },
+  {
+    "name": "Narciso Rodriguez Pure Musc For Her EDP",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Xạ hương, hoa trắng, gỗ mềm; sạch và tinh. Hợp dùng: Công sở. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Xạ hương, phấn, da sạch",
+    "photo": "assets/photos/perfume-women-22.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://www.douglas.it/it/p/3001052443",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://www.douglas.it/it/p/3001052443",
+    "productUrl": "https://www.douglas.it/it/p/3001052443",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 2500000,
+    "priceMax": 4500000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://www.douglas.it/it/p/3001052443"
+  },
+  {
+    "name": "Narciso Rodriguez Poudrée EDP",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Phấn, xạ hương, hoa; ấm và mịn. Hợp dùng: Trời mát, hẹn gần. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Xạ hương, phấn, da sạch",
+    "photo": "assets/photos/perfume-women-23.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://boutique.heathrow.com/en/poudree-eau-de-parfum/world-duty-free_2452235.html",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://boutique.heathrow.com/en/poudree-eau-de-parfum/world-duty-free_2452235.html",
+    "productUrl": "https://boutique.heathrow.com/en/poudree-eau-de-parfum/world-duty-free_2452235.html",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 2500000,
+    "priceMax": 4500000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://boutique.heathrow.com/en/poudree-eau-de-parfum/world-duty-free_2452235.html"
+  },
+  {
+    "name": "Prada Infusion d’Iris EDP",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Diên vĩ, hoa cam, gỗ; phấn khô, thanh lịch. Hợp dùng: Đi làm. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Xạ hương, phấn, da sạch",
+    "photo": "assets/photos/perfume-women-24.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://www.aeliadutyfree.ch/geneva/en/infusion-d-iris-ma-pa-100419216.html",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://www.aeliadutyfree.ch/geneva/en/infusion-d-iris-ma-pa-100419216.html",
+    "productUrl": "https://www.aeliadutyfree.ch/geneva/en/infusion-d-iris-ma-pa-100419216.html",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 3000000,
+    "priceMax": 5500000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://www.aeliadutyfree.ch/geneva/en/infusion-d-iris-ma-pa-100419216.html"
+  },
+  {
+    "name": "Juliette Has a Gun Not a Perfume EDP",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Gỗ amber, xạ hương kiểu da sạch; tối giản. Hợp dùng: Hằng ngày. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Xạ hương, phấn, da sạch",
+    "photo": "assets/photos/perfume-women-25.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://laluz.vn/juliette-has-a-gun-not-a-perfume-edp",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://laluz.vn/juliette-has-a-gun-not-a-perfume-edp",
+    "productUrl": "https://laluz.vn/juliette-has-a-gun-not-a-perfume-edp",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 2500000,
+    "priceMax": 5000000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://laluz.vn/juliette-has-a-gun-not-a-perfume-edp"
+  },
+  {
+    "name": "Chanel Coco Mademoiselle EDP",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Cam, hồng, hoắc hương; sắc sảo, chỉn chu. Hợp dùng: Công sở, sự kiện. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Thanh lịch, trưởng thành",
+    "photo": "assets/photos/perfume-women-26.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://www.chanel.com/us/fragrance/p/116390/coco-mademoiselle-eau-de-parfum-spray/",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://www.chanel.com/us/fragrance/p/116390/coco-mademoiselle-eau-de-parfum-spray/",
+    "productUrl": "https://www.chanel.com/us/fragrance/p/116390/coco-mademoiselle-eau-de-parfum-spray/",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 3500000,
+    "priceMax": 6500000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://www.chanel.com/us/fragrance/p/116390/coco-mademoiselle-eau-de-parfum-spray/"
+  },
+  {
+    "name": "Chanel N°5 EDP",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Aldehyde, hoa, phấn; trang trọng, cổ điển. Hợp dùng: Tiệc, dịp đặc biệt. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Thanh lịch, trưởng thành",
+    "photo": "assets/photos/perfume-women-27.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://www.chanel.com/us/fragrance/p/105450/n5-eau-de-parfum-spray/",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://www.chanel.com/us/fragrance/p/105450/n5-eau-de-parfum-spray/",
+    "productUrl": "https://www.chanel.com/us/fragrance/p/105450/n5-eau-de-parfum-spray/",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 3500000,
+    "priceMax": 7000000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://www.chanel.com/us/fragrance/p/105450/n5-eau-de-parfum-spray/"
+  },
+  {
+    "name": "Dior J’adore EDP",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Hoa trắng, hoa vàng, trái cây; rực rỡ, nữ tính. Hợp dùng: Đi làm, tiệc. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Thanh lịch, trưởng thành",
+    "photo": "assets/photos/perfume-women-28.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://www.perfumenz.co.nz/products/jadore-by-christian-dior-100ml-edp",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://www.perfumenz.co.nz/products/jadore-by-christian-dior-100ml-edp",
+    "productUrl": "https://www.perfumenz.co.nz/products/jadore-by-christian-dior-100ml-edp",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 2500000,
+    "priceMax": 5500000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://www.perfumenz.co.nz/products/jadore-by-christian-dior-100ml-edp"
+  },
+  {
+    "name": "Chloé Nomade EDP",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Mận mirabelle, hoa, rêu sồi; phóng khoáng. Hợp dùng: Công sở, du lịch. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Thanh lịch, trưởng thành",
+    "photo": "assets/photos/perfume-women-29.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://www.drogariaspacheco.com.br/perfume-chloe-nomade-feminino-eau-de-parfum-50-ml-1747r77x69255g76/p",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://www.drogariaspacheco.com.br/perfume-chloe-nomade-feminino-eau-de-parfum-50-ml-1747r77x69255g76/p",
+    "productUrl": "https://www.drogariaspacheco.com.br/perfume-chloe-nomade-feminino-eau-de-parfum-50-ml-1747r77x69255g76/p",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 2500000,
+    "priceMax": 5000000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://www.drogariaspacheco.com.br/perfume-chloe-nomade-feminino-eau-de-parfum-50-ml-1747r77x69255g76/p"
+  },
+  {
+    "name": "Cartier La Panthère EDP",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Dành dành, rêu, xạ hương; mạnh, sang. Hợp dùng: Gặp gỡ, tiệc tối. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Thanh lịch, trưởng thành",
+    "photo": "assets/photos/perfume-women-30.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://beautyhouse.com/products/cartier-la-panthere-eau-de-parfum-for-women",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://beautyhouse.com/products/cartier-la-panthere-eau-de-parfum-for-women",
+    "productUrl": "https://beautyhouse.com/products/cartier-la-panthere-eau-de-parfum-for-women",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 3000000,
+    "priceMax": 6000000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://beautyhouse.com/products/cartier-la-panthere-eau-de-parfum-for-women"
+  },
+  {
+    "name": "Lancôme La Vie Est Belle EDP",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Praline, vanilla, diên vĩ; ngọt đậm, rạng rỡ. Hợp dùng: Trời mát, đi chơi. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Ngọt kiểu bánh kẹo",
+    "photo": "assets/photos/perfume-women-31.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://perfumy.pl/Perfumy-o-zapachu-paczuli-blog-pol-1592996645.html",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://perfumy.pl/Perfumy-o-zapachu-paczuli-blog-pol-1592996645.html",
+    "productUrl": "https://perfumy.pl/Perfumy-o-zapachu-paczuli-blog-pol-1592996645.html",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 2500000,
+    "priceMax": 5000000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://perfumy.pl/Perfumy-o-zapachu-paczuli-blog-pol-1592996645.html"
+  },
+  {
+    "name": "Prada Candy EDP",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Caramel, nhựa benzoin, xạ hương; ngọt mềm. Hợp dùng: Hẹn hò. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Ngọt kiểu bánh kẹo",
+    "photo": "assets/photos/perfume-women-32.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://www.sanroque.com.uy/catalogo/perfume-prada-candy-eau-de-parfum-50ml_137375_137375",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://www.sanroque.com.uy/catalogo/perfume-prada-candy-eau-de-parfum-50ml_137375_137375",
+    "productUrl": "https://www.sanroque.com.uy/catalogo/perfume-prada-candy-eau-de-parfum-50ml_137375_137375",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 2500000,
+    "priceMax": 5000000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://www.sanroque.com.uy/catalogo/perfume-prada-candy-eau-de-parfum-50ml_137375_137375"
+  },
+  {
+    "name": "Viktor&Rolf Bonbon EDP",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Caramel, đào, cam; như kẹo trái cây. Hợp dùng: Đi chơi buổi tối. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Ngọt kiểu bánh kẹo",
+    "photo": "assets/photos/perfume-women-33.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://www.fragranceoutlet.com/products/viktor-rolf-bonbon-eau-de-parfum-spray-for-women",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://www.fragranceoutlet.com/products/viktor-rolf-bonbon-eau-de-parfum-spray-for-women",
+    "productUrl": "https://www.fragranceoutlet.com/products/viktor-rolf-bonbon-eau-de-parfum-spray-for-women",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 2500000,
+    "priceMax": 5000000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://www.fragranceoutlet.com/products/viktor-rolf-bonbon-eau-de-parfum-spray-for-women"
+  },
+  {
+    "name": "Ariana Grande Cloud EDP",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Kem dừa, praline, gỗ xạ; bồng bềnh, trẻ. Hợp dùng: Đi chơi, trời dịu. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Ngọt kiểu bánh kẹo",
+    "photo": "assets/photos/perfume-women-34.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://www.justmylook.com/products/ariana-grande-cloud-eau-de-parfum-100ml",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://www.justmylook.com/products/ariana-grande-cloud-eau-de-parfum-100ml",
+    "productUrl": "https://www.justmylook.com/products/ariana-grande-cloud-eau-de-parfum-100ml",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 1500000,
+    "priceMax": 3500000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://www.justmylook.com/products/ariana-grande-cloud-eau-de-parfum-100ml"
+  },
+  {
+    "name": "Kayali Vanilla 28 EDP",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Vanilla, đường nâu, tonka; ấm và ngọt. Hợp dùng: Hẹn tối, trời lạnh. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Ngọt kiểu bánh kẹo",
+    "photo": "assets/photos/perfume-women-35.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://www.sephora.com/product/kayali-vanilla-P439406",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://www.sephora.com/product/kayali-vanilla-P439406",
+    "productUrl": "https://www.sephora.com/product/kayali-vanilla-P439406",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 3500000,
+    "priceMax": 6500000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://www.sephora.com/product/kayali-vanilla-P439406"
+  },
+  {
+    "name": "YSL Libre EDP",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Lavender, hoa cam, vanilla; tự tin, sắc nét. Hợp dùng: Đi làm, đi tối. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Quyến rũ hiện đại",
+    "photo": "assets/photos/perfume-women-36.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://parfumera.fr/eau-de-parfum-femme/17480-yves-saint-laurent-libre-eau-de-parfum.html",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://parfumera.fr/eau-de-parfum-femme/17480-yves-saint-laurent-libre-eau-de-parfum.html",
+    "productUrl": "https://parfumera.fr/eau-de-parfum-femme/17480-yves-saint-laurent-libre-eau-de-parfum.html",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 2500000,
+    "priceMax": 5000000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://parfumera.fr/eau-de-parfum-femme/17480-yves-saint-laurent-libre-eau-de-parfum.html"
+  },
+  {
+    "name": "YSL Black Opium EDP",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Cà phê, vanilla, hoa trắng; ngọt, sôi nổi. Hợp dùng: Hẹn hò, tiệc. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Quyến rũ hiện đại",
+    "photo": "assets/photos/perfume-women-37.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://www.lookfantastic.com/p/yves-saint-laurent-black-opium-eau-de-parfum-50ml/11791423/",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://www.lookfantastic.com/p/yves-saint-laurent-black-opium-eau-de-parfum-50ml/11791423/",
+    "productUrl": "https://www.lookfantastic.com/p/yves-saint-laurent-black-opium-eau-de-parfum-50ml/11791423/",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 2500000,
+    "priceMax": 5000000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://www.lookfantastic.com/p/yves-saint-laurent-black-opium-eau-de-parfum-50ml/11791423/"
+  },
+  {
+    "name": "Carolina Herrera Good Girl EDP",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Hoa trắng, tonka, cacao; ngọt, gợi cảm. Hợp dùng: Đi tối. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Quyến rũ hiện đại",
+    "photo": "assets/photos/perfume-women-38.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://www.carolinaherrera.com/es/es/p-fragrance/good-girl-eau-de-parfum",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://www.carolinaherrera.com/es/es/p-fragrance/good-girl-eau-de-parfum",
+    "productUrl": "https://www.carolinaherrera.com/es/es/p-fragrance/good-girl-eau-de-parfum",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 2500000,
+    "priceMax": 5000000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://www.carolinaherrera.com/es/es/p-fragrance/good-girl-eau-de-parfum"
+  },
+  {
+    "name": "Versace Crystal Noir EDP",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Hoa trắng, gia vị, gỗ; tối, mềm, bí ẩn. Hợp dùng: Hẹn hò, tiệc tối. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Quyến rũ hiện đại",
+    "photo": "assets/photos/perfume-women-39.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://www.faces.sa/en/p/versace-crystal-noir-eau-de-parfum-PM_VERSACE_Crystal_Noir_EDP.html",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://www.faces.sa/en/p/versace-crystal-noir-eau-de-parfum-PM_VERSACE_Crystal_Noir_EDP.html",
+    "productUrl": "https://www.faces.sa/en/p/versace-crystal-noir-eau-de-parfum-PM_VERSACE_Crystal_Noir_EDP.html",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 2000000,
+    "priceMax": 4000000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://www.faces.sa/en/p/versace-crystal-noir-eau-de-parfum-PM_VERSACE_Crystal_Noir_EDP.html"
+  },
+  {
+    "name": "Jean Paul Gaultier La Belle EDP",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Lê, vanilla, vetiver; ngọt mọng, quyến rũ. Hợp dùng: Hẹn tối, trời mát. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Quyến rũ hiện đại",
+    "photo": "assets/photos/perfume-women-40.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://www.jeanpaulgaultier.com/us/en_US/p/range-la-belle/la-belle-eau-de-parfum-000000000065132212",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://www.jeanpaulgaultier.com/us/en_US/p/range-la-belle/la-belle-eau-de-parfum-000000000065132212",
+    "productUrl": "https://www.jeanpaulgaultier.com/us/en_US/p/range-la-belle/la-belle-eau-de-parfum-000000000065132212",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 2500000,
+    "priceMax": 5000000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://www.jeanpaulgaultier.com/us/en_US/p/range-la-belle/la-belle-eau-de-parfum-000000000065132212"
+  },
+  {
+    "name": "Elizabeth Arden Green Tea EDT",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Trà xanh, chanh, bạc hà; nhẹ, thư giãn. Hợp dùng: Trời nóng, ở nhà. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Xanh, trà, gỗ",
+    "photo": "assets/photos/perfume-women-41.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://www.magaseek.com/commodity/STRD1582D/EL7025DU000287/",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://www.magaseek.com/commodity/STRD1582D/EL7025DU000287/",
+    "productUrl": "https://www.magaseek.com/commodity/STRD1582D/EL7025DU000287/",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 500000,
+    "priceMax": 1500000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://www.magaseek.com/commodity/STRD1582D/EL7025DU000287/"
+  },
+  {
+    "name": "Chanel N°19 EDT",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Lá xanh, diên vĩ, vetiver; lạnh, độc lập. Hợp dùng: Công sở. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Xanh, trà, gỗ",
+    "photo": "assets/photos/perfume-women-42.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://www.beautyliv.com/Product/chanel_no_19_eau_de_toilette_18272",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://www.beautyliv.com/Product/chanel_no_19_eau_de_toilette_18272",
+    "productUrl": "https://www.beautyliv.com/Product/chanel_no_19_eau_de_toilette_18272",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 3500000,
+    "priceMax": 6500000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://www.beautyliv.com/Product/chanel_no_19_eau_de_toilette_18272"
+  },
+  {
+    "name": "Diptyque Philosykos EDT",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Lá sung, nhựa cây, gỗ; xanh và hơi sữa. Hợp dùng: Ban ngày, nghỉ dưỡng. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Xanh, trà, gỗ",
+    "photo": "assets/photos/perfume-women-43.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://duranteroma.it/prodotto/diptyque-philosykos-eau-de-toilette-100ml/",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://duranteroma.it/prodotto/diptyque-philosykos-eau-de-toilette-100ml/",
+    "productUrl": "https://duranteroma.it/prodotto/diptyque-philosykos-eau-de-toilette-100ml/",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 4000000,
+    "priceMax": 7000000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://duranteroma.it/prodotto/diptyque-philosykos-eau-de-toilette-100ml/"
+  },
+  {
+    "name": "Bvlgari Eau Parfumée au Thé Vert",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Trà xanh, cam chanh, gia vị nhẹ; thanh sạch. Hợp dùng: Trời nóng. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Xanh, trà, gỗ",
+    "photo": "assets/photos/perfume-women-44.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://www.bulgari.com/en-us/fragrances/eau-parfumee",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://www.bulgari.com/en-us/fragrances/eau-parfumee",
+    "productUrl": "https://www.bulgari.com/en-us/fragrances/eau-parfumee",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 2500000,
+    "priceMax": 5000000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://www.bulgari.com/en-us/fragrances/eau-parfumee"
+  },
+  {
+    "name": "Byredo Bal d’Afrique EDP",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Cam chanh, hoa, vetiver; sáng, gỗ mềm. Hợp dùng: Đi làm, đi chơi. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Xanh, trà, gỗ",
+    "photo": "assets/photos/perfume-women-45.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://m.eng.lottedfs.com/kr/product/productDetail?adltPrdYn=N&prdNo=20000961515&prdOptNo=20001281771",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://m.eng.lottedfs.com/kr/product/productDetail?adltPrdYn=N&prdNo=20000961515&prdOptNo=20001281771",
+    "productUrl": "https://m.eng.lottedfs.com/kr/product/productDetail?adltPrdYn=N&prdNo=20000961515&prdOptNo=20001281771",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 5000000,
+    "priceMax": 9000000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://m.eng.lottedfs.com/kr/product/productDetail?adltPrdYn=N&prdNo=20000961515&prdOptNo=20001281771"
+  },
+  {
+    "name": "Guerlain Shalimar EDP",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Cam bergamot, vanilla, nhựa thơm; khói phấn cổ điển. Hợp dùng: Trời lạnh, tiệc. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Đậm, nghệ thuật, khác biệt",
+    "photo": "assets/photos/perfume-women-46.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://www.deloox.de/produkt/1017958/guerlain-shalimar-eau-de-parfum-90-ml.html",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://www.deloox.de/produkt/1017958/guerlain-shalimar-eau-de-parfum-90-ml.html",
+    "productUrl": "https://www.deloox.de/produkt/1017958/guerlain-shalimar-eau-de-parfum-90-ml.html",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 2500000,
+    "priceMax": 5000000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://www.deloox.de/produkt/1017958/guerlain-shalimar-eau-de-parfum-90-ml.html"
+  },
+  {
+    "name": "Tom Ford Black Orchid EDP",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Hoa tối, nấm truffle, hoắc hương; dày, bí ẩn. Hợp dùng: Tiệc tối. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Đậm, nghệ thuật, khác biệt",
+    "photo": "assets/photos/perfume-women-47.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://bluemercury.com/products/tom-ford-black-orchid-edp-spray",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://bluemercury.com/products/tom-ford-black-orchid-edp-spray",
+    "productUrl": "https://bluemercury.com/products/tom-ford-black-orchid-edp-spray",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 4000000,
+    "priceMax": 7500000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://bluemercury.com/products/tom-ford-black-orchid-edp-spray"
+  },
+  {
+    "name": "Mugler Alien EDP",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Nhài, amber, gỗ; đậm và có dấu ấn. Hợp dùng: Buổi tối. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Đậm, nghệ thuật, khác biệt",
+    "photo": "assets/photos/perfume-women-48.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://terrywhitechemmart.com.au/shop/product/thierry-mugler-alien-edp-refillable-spray-60ml",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://terrywhitechemmart.com.au/shop/product/thierry-mugler-alien-edp-refillable-spray-60ml",
+    "productUrl": "https://terrywhitechemmart.com.au/shop/product/thierry-mugler-alien-edp-refillable-spray-60ml",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 2500000,
+    "priceMax": 5000000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://terrywhitechemmart.com.au/shop/product/thierry-mugler-alien-edp-refillable-spray-60ml"
+  },
+  {
+    "name": "MFK Baccarat Rouge 540 EDP",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Nghệ tây, gỗ amber, ngọt thoáng; nổi bật. Hợp dùng: Sự kiện, đi tối. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Đậm, nghệ thuật, khác biệt",
+    "photo": "assets/photos/perfume-women-49.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://scentira.in/products/maison-francis-kurkdijan-baccarat-rouge-540-eau-de-parfum",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://scentira.in/products/maison-francis-kurkdijan-baccarat-rouge-540-eau-de-parfum",
+    "productUrl": "https://scentira.in/products/maison-francis-kurkdijan-baccarat-rouge-540-eau-de-parfum",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 8000000,
+    "priceMax": 15000000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://scentira.in/products/maison-francis-kurkdijan-baccarat-rouge-540-eau-de-parfum"
+  },
+  {
+    "name": "Guerlain Cuir Béluga EDP",
+    "address": "Nước hoa nữ",
+    "area": "Quà tặng",
+    "desc": "Mùi và phong cách: Da lộn, vanilla, phấn; mượt, êm, tinh tế. Hợp dùng: Hẹn hò, trời mát. Thử trên da trước khi mua chai lớn vì mùi có thể thay đổi theo cơ địa và thời tiết.",
+    "subcategory": "Nước hoa nữ · Đậm, nghệ thuật, khác biệt",
+    "photo": "assets/photos/perfume-women-50.jpg",
+    "photoSource": "Ảnh chai sản phẩm · trang sản phẩm",
+    "photoSourceUrl": "https://www.elpalaciodehierro.com/guerlain-perfume-l%E2%80%99art-la-matiere-cuir-beluga-eau-de-parfum-200-ml-41910457.html",
+    "source": "Thông tin sản phẩm · hãng/nhà bán lẻ",
+    "sourceUrl": "https://www.elpalaciodehierro.com/guerlain-perfume-l%E2%80%99art-la-matiere-cuir-beluga-eau-de-parfum-200-ml-41910457.html",
+    "productUrl": "https://www.elpalaciodehierro.com/guerlain-perfume-l%E2%80%99art-la-matiere-cuir-beluga-eau-de-parfum-200-ml-41910457.html",
+    "product": true,
+    "genderLabel": "Nước hoa nữ",
+    "priceMin": 8000000,
+    "priceMax": 15000000,
+    "priceBasis": "chai 30–100 ml · ước tính tại Việt Nam; tùy dung tích, phiên bản và nơi bán",
+    "priceStatus": "estimate",
+    "priceSourceUrl": "https://www.elpalaciodehierro.com/guerlain-perfume-l%E2%80%99art-la-matiere-cuir-beluga-eau-de-parfum-200-ml-41910457.html"
+  }
+];
+var COMBO_PERFUME_DATA = { men: COMBO_MENS_PERFUMES, women: COMBO_WOMENS_PERFUMES };
+if (typeof module !== "undefined" && module.exports) module.exports = COMBO_PERFUME_DATA;
