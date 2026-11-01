@@ -25,8 +25,8 @@
     <section class="date-intro"><div><span class="eyebrow">HẸN HÒ KHÔNG CẦN ĐAU ĐẦU</span><h2>Một buổi hẹn vui bắt đầu từ <em>một ý tưởng nhỏ.</em></h2></div><p>Chọn một danh mục bên dưới để tìm địa điểm hoặc lấy cảm hứng. Nhớ hỏi sở thích, ngân sách và lịch của người ấy trước khi chốt nhé.</p></section>
     <p class="count" id="count"></p>
     <div class="results-toolbar">
-      <div class="results-filters">
-    <div class="search-row">
+      <div class="results-toolbar-top">
+        <div class="search-row">
       <div class="search-box">
         <span class="search-icon" aria-hidden="true">🔍</span>
         <input
@@ -38,15 +38,17 @@
         />
         <button id="searchClear" class="search-clear" type="button" aria-label="Xoá tìm kiếm" hidden>✕</button>
       </div>
-      <label class="area-filter"><span>📍</span><select id="areaSelect" aria-label="Lọc theo khu vực"><option value="">Mọi khu vực</option><option value="Cầu Giấy">Cầu Giấy</option><option value="Hoàn Kiếm">Hoàn Kiếm</option><option value="Ba Đình">Ba Đình</option><option value="Tây Hồ">Tây Hồ</option><option value="Đống Đa">Đống Đa</option><option value="Hai Bà Trưng">Hai Bà Trưng</option><option value="Thanh Xuân">Thanh Xuân</option><option value="Hoàng Mai">Hoàng Mai</option><option value="Long Biên">Long Biên</option><option value="Gia Lâm">Gia Lâm</option><option value="Nam Từ Liêm">Nam Từ Liêm</option><option value="Bắc Từ Liêm">Bắc Từ Liêm</option><option value="Sóc Sơn">Sóc Sơn</option><option value="Ba Vì">Ba Vì</option><option value="Ninh Bình">Ninh Bình</option><option value="Quảng Ninh">Quảng Ninh</option><option value="Hải Phòng">Hải Phòng</option><option value="Lào Cai">Lào Cai</option><option value="Tuyên Quang">Tuyên Quang</option><option value="Cao Bằng">Cao Bằng</option><option value="Thanh Hóa">Thanh Hóa</option><option value="Sơn La">Sơn La</option><option value="Phú Thọ">Phú Thọ</option><option value="Trần Thái Tông">Trần Thái Tông</option><option value="Xuân Thủy">Xuân Thủy</option><option value="Trung Hòa">Trung Hòa</option><option value="Nguyễn Khang">Nguyễn Khang</option></select></label>
+      <label class="area-filter"><span>📍 Khu vực</span><select id="areaSelect" aria-label="Lọc theo khu vực"><option value="">Mọi khu vực</option><option value="Cầu Giấy">Cầu Giấy</option><option value="Hoàn Kiếm">Hoàn Kiếm</option><option value="Ba Đình">Ba Đình</option><option value="Tây Hồ">Tây Hồ</option><option value="Đống Đa">Đống Đa</option><option value="Hai Bà Trưng">Hai Bà Trưng</option><option value="Thanh Xuân">Thanh Xuân</option><option value="Hoàng Mai">Hoàng Mai</option><option value="Long Biên">Long Biên</option><option value="Gia Lâm">Gia Lâm</option><option value="Nam Từ Liêm">Nam Từ Liêm</option><option value="Bắc Từ Liêm">Bắc Từ Liêm</option><option value="Sóc Sơn">Sóc Sơn</option><option value="Ba Vì">Ba Vì</option><option value="Ninh Bình">Ninh Bình</option><option value="Quảng Ninh">Quảng Ninh</option><option value="Hải Phòng">Hải Phòng</option><option value="Lào Cai">Lào Cai</option><option value="Tuyên Quang">Tuyên Quang</option><option value="Cao Bằng">Cao Bằng</option><option value="Thanh Hóa">Thanh Hóa</option><option value="Sơn La">Sơn La</option><option value="Phú Thọ">Phú Thọ</option><option value="Trần Thái Tông">Trần Thái Tông</option><option value="Xuân Thủy">Xuân Thủy</option><option value="Trung Hòa">Trung Hòa</option><option value="Nguyễn Khang">Nguyễn Khang</option></select></label>
     </div>
-    <div class="facet-row">
-      <label><span>Danh mục nhỏ</span><select id="subcategorySelect" aria-label="Lọc theo danh mục nhỏ"><option value="">Tất cả danh mục</option></select></label>
-      <label><span>Mức chi phí tham khảo</span><select id="budgetSelect" aria-label="Lọc theo mức chi phí tham khảo"><option value="">Mọi mức giá</option><option value="0-100000">Đến 100.000đ</option><option value="100000-250000">100.000–250.000đ</option><option value="250000-500000">250.000–500.000đ</option><option value="500000-99999999">Trên 500.000đ</option></select></label>
-    </div>
-    <p class="filter-help">Mỗi thẻ ghi rõ đây là giá/menu công khai, mức Google Maps ghi nhận hay ước tính ngân sách. Đơn vị thay đổi theo danh mục; ước tính không phải báo giá của địa điểm. Mục đi chơi xa tính vé/hoạt động tại điểm, chưa gồm đi lại, ăn uống và lưu trú.</p>
+        <nav class="pagination" id="pagination" aria-label="Phân trang địa điểm" hidden></nav>
       </div>
-      <nav class="pagination" id="pagination" aria-label="Phân trang địa điểm" hidden></nav>
+      <div class="results-filters">
+        <div class="facet-row">
+      <label><span>Danh mục nhỏ</span><select id="subcategorySelect" aria-label="Lọc theo danh mục nhỏ"><option value="">Tất cả danh mục</option></select></label>
+      <label><span>Ngân sách</span><select id="budgetSelect" aria-label="Lọc theo mức chi phí tham khảo"><option value="">Mọi mức giá</option><option value="0-100000">Đến 100.000đ</option><option value="100000-250000">100.000–250.000đ</option><option value="250000-500000">250.000–500.000đ</option><option value="500000-99999999">Trên 500.000đ</option></select></label>
+    </div>
+        <p class="filter-help">Mỗi thẻ ghi rõ đây là giá/menu công khai, mức Google Maps ghi nhận hay ước tính ngân sách. Đơn vị thay đổi theo danh mục; ước tính không phải báo giá của địa điểm. Mục đi chơi xa tính vé/hoạt động tại điểm, chưa gồm đi lại, ăn uống và lưu trú.</p>
+      </div>
     </div>
     <section class="place-list" id="placeList" aria-live="polite"></section>
   </main>

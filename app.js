@@ -182,28 +182,12 @@
       });
       paginationEl.appendChild(button);
     }
-    function addGap() {
-      var gap = document.createElement("span");
-      gap.className = "page-gap";
-      gap.textContent = "…";
-      paginationEl.appendChild(gap);
-    }
-
     addButton("← Trước", Math.max(1, currentPage - 1), { disabled: currentPage === 1, ariaLabel: "Trang trước" });
-    var start = Math.max(1, currentPage - 2);
-    var end = Math.min(pageCount, start + 4);
-    start = Math.max(1, end - 4);
-    if (start > 1) {
-      addButton("1", 1, { current: currentPage === 1 });
-      if (start > 2) addGap();
-    }
-    for (var page = start; page <= end; page += 1) {
-      addButton(String(page), page, { current: page === currentPage });
-    }
-    if (end < pageCount) {
-      if (end < pageCount - 1) addGap();
-      addButton(String(pageCount), pageCount, { current: currentPage === pageCount });
-    }
+    var pageStatus = document.createElement("span");
+    pageStatus.className = "page-status";
+    pageStatus.setAttribute("aria-live", "polite");
+    pageStatus.textContent = currentPage + " / " + pageCount;
+    paginationEl.appendChild(pageStatus);
     addButton("Sau →", Math.min(pageCount, currentPage + 1), { disabled: currentPage === pageCount, ariaLabel: "Trang sau" });
     return pageCount;
   }
@@ -242,10 +226,7 @@
         adviceDialog.addEventListener("click", function (event) { if (event.target === adviceDialog) adviceDialog.close(); });
       }
       renderPagination(items.length);
-      var firstItem = items.length ? (currentPage - 1) * pageSize + 1 : 0;
-      var lastItem = Math.min(currentPage * pageSize, items.length);
-      var pageSummary = items.length ? "Hiển thị " + firstItem + "–" + lastItem + " trên " + items.length + " kết quả · trang " + currentPage + "/" + pageCount : "Không có kết quả phù hợp";
-      countEl.textContent = categoryTab ? items.length + " / " + target + " " + (categoryTab.id === "gifts" ? "gợi ý quà tặng" : "địa điểm") + " · " + pageSummary : items.length + " gợi ý tổng hợp · " + pageSummary;
+      countEl.textContent = items.length ? (categoryTab ? items.length + " / " + target + " " + (categoryTab.id === "gifts" ? "gợi ý quà tặng" : "địa điểm") : items.length + " gợi ý tổng hợp") : "Không có kết quả phù hợp";
       Array.prototype.forEach.call(listEl.querySelectorAll("img.place-img"), function (img) {
         img.addEventListener("error", function () {
           var card = img.closest(".place-card");

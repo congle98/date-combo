@@ -506,16 +506,28 @@ main { width:min(calc(100% - 48px),1800px); max-width:1800px; padding:22px 0 60p
 .gift-advice-dialog-content { max-height:calc(88vh - 82px); overflow:auto; padding:20px; }
 .gift-advice-dialog .gift-advice,.gift-advice-dialog .dating-tips { grid-column:auto; margin:0 0 16px; }
 .gift-advice-dialog .gift-advice-grid,.gift-advice-dialog .dating-tips-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
-.results-toolbar { display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:center; gap:16px; margin:8px 0 18px; }
-.results-filters { display:grid; grid-template-columns:minmax(200px,1.4fr) repeat(3,minmax(125px,1fr)); align-items:center; gap:8px; min-width:0; }
-.results-filters .search-row,.results-filters .facet-row { display:contents; }
-.results-filters .filter-help { grid-column:1/-1; margin:0 2px; }
-.results-toolbar .pagination { margin:0; justify-content:flex-end; }
+.results-toolbar { margin:8px 0 18px; padding:14px 16px 12px; border:1px solid #ebe7df; border-radius:14px; background:rgba(255,255,255,.82); box-shadow:0 4px 14px rgba(48,54,42,.045); }
+.results-toolbar-top { display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:center; gap:14px; }
+.results-toolbar .search-row { display:flex; gap:10px; min-width:0; margin:0; }
+.results-toolbar .search-box { min-width:0; min-height:44px; border:1px solid #e8e4dc; border-radius:10px; box-shadow:none; }
+.results-toolbar .search-box input { padding:9px 7px; font-size:14px; }
+.results-toolbar .area-filter { flex:0 0 220px; min-width:0; min-height:44px; justify-content:space-between; padding:0 11px; border-color:#e8e4dc; border-radius:10px; }
+.results-toolbar .area-filter span { flex:0 0 auto; white-space:nowrap; color:#778078; font-size:11px; }
+.results-toolbar .area-filter select { min-width:0; max-width:none; width:100px; font-size:12px; text-align:right; }
+.results-filters { display:block; min-width:0; margin-top:10px; }
+.results-filters .facet-row { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; margin:0; }
+.results-filters .facet-row label { display:flex; justify-content:space-between; gap:12px; min-width:0; min-height:42px; padding:0 12px; border-color:#e8e4dc; border-radius:10px; background:#fff; }
+.results-filters .facet-row label span { flex:0 0 auto; white-space:nowrap; color:#778078; font-size:11px; }
+.results-filters .facet-row select { min-width:0; max-width:62%; width:62%; text-align:right; text-overflow:ellipsis; }
+.results-filters .filter-help { margin:8px 2px 0; color:#85877f; font-size:10px; line-height:1.5; }
+.results-toolbar .pagination { display:flex; align-items:center; justify-content:flex-end; gap:6px; margin:0; white-space:nowrap; }
 .pagination[hidden] { display:none; }
-@media(max-width:1100px) {
-  .results-toolbar { grid-template-columns:1fr; gap:8px; }
+.page-status { min-width:66px; padding:8px 10px; border-radius:8px; background:#f4f2ec; color:#697366; font-size:11px; font-weight:700; text-align:center; }
+.results-toolbar .page-button { min-height:36px; padding:6px 10px; border-color:#e8e4dc; font-size:11px; }
+.results-toolbar .page-button.active { border-color:var(--accent); }
+@media(max-width:900px) {
+  .results-toolbar-top { grid-template-columns:1fr; gap:10px; }
   .results-toolbar .pagination { justify-content:flex-start; }
-  .results-filters { grid-template-columns:repeat(2,minmax(0,1fr)); }
 }
 @media(max-width:600px) {
   main { width:calc(100% - 28px); padding:14px 0 46px; }
@@ -530,5 +542,10 @@ main { width:min(calc(100% - 48px),1800px); max-width:1800px; padding:22px 0 60p
   .gift-advice-dialog-header { padding:14px 16px; }
   .gift-advice-dialog-content { max-height:calc(92vh - 72px); padding:12px; }
   .gift-advice-dialog .gift-advice-grid,.gift-advice-dialog .dating-tips-grid { grid-template-columns:1fr; }
-  .results-filters .search-box { grid-column:1/-1; }
+  .results-toolbar { padding:12px; }
+  .results-toolbar .search-row { flex-direction:column; gap:8px; }
+  .results-toolbar .area-filter { flex-basis:auto; width:100%; }
+  .results-filters .facet-row { grid-template-columns:1fr; gap:7px; }
+  .results-filters .facet-row select { max-width:65%; width:65%; }
+  .results-filters .filter-help { margin-top:8px; }
 }
