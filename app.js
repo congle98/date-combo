@@ -17,7 +17,7 @@
   var activeTabId = "all";
   var keyword = "";
   var currentPage = 1;
-  var pageSize = 16;
+  var pageSize = 8;
 
   function escapeHtml(value) {
     return String(value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
