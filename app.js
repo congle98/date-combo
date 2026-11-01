@@ -148,7 +148,7 @@
         ["Mời người ấy cùng chọn", "đưa ra vài cửa hàng hoặc hoạt động để món quà đúng ý mà vẫn có thời gian bên nhau."]
       ], note: "Tránh nước hoa, đồ mặc cần đúng size, mỹ phẩm đặc trị, thú cưng và quà quá đắt khi chưa hiểu rõ mong muốn." }
     ];
-    return '<section class="gift-advice"><div class="gift-advice-heading"><span>GỢI Ý CHỌN QUÀ</span><p>Gợi ý món cụ thể, vì sao hợp dịp và điều nên kiểm tra trước khi mua. Hãy chọn theo điều người ấy thích, không theo giá món quà.</p></div><div class="gift-advice-grid">' + advice.map(function (row) { return '<article class="gift-advice-card"><h3>' + escapeHtml(row.occasion) + '</h3><p class="gift-advice-context">' + escapeHtml(row.context) + '</p><ul>' + row.gifts.map(function (gift) { return '<li><strong>' + escapeHtml(gift[0]) + '</strong> — ' + escapeHtml(gift[1]) + '</li>'; }).join('') + '</ul><p class="gift-advice-note">' + escapeHtml(row.note) + '</p></article>'; }).join('') + '</div></section>' + datingTipsHtml();
+    return '<div class="gift-advice-launch"><button class="gift-advice-trigger" type="button" aria-haspopup="dialog" aria-controls="giftAdviceDialog">🎁 Gợi ý chọn quà & tips hẹn hò</button></div><dialog class="gift-advice-dialog" id="giftAdviceDialog"><header class="gift-advice-dialog-header"><div><span>GỢI Ý & CẨM NANG</span><h2>Chọn quà và hẹn hò</h2></div><form method="dialog"><button class="gift-advice-close" aria-label="Đóng cửa sổ">×</button></form></header><div class="gift-advice-dialog-content"><section class="gift-advice"><div class="gift-advice-heading"><span>GỢI Ý CHỌN QUÀ</span><p>Gợi ý món cụ thể, vì sao hợp dịp và điều nên kiểm tra trước khi mua. Hãy chọn theo điều người ấy thích, không theo giá món quà.</p></div><div class="gift-advice-grid">' + advice.map(function (row) { return '<article class="gift-advice-card"><h3>' + escapeHtml(row.occasion) + '</h3><p class="gift-advice-context">' + escapeHtml(row.context) + '</p><ul>' + row.gifts.map(function (gift) { return '<li><strong>' + escapeHtml(gift[0]) + '</strong> — ' + escapeHtml(gift[1]) + '</li>'; }).join('') + '</ul><p class="gift-advice-note">' + escapeHtml(row.note) + '</p></article>'; }).join('') + '</div></section>' + datingTipsHtml() + '</div></dialog>';
   }
   function datingTipsHtml() {
     var tips = [
@@ -235,7 +235,12 @@
       listEl.innerHTML = pageItems.length ? pageItems.map(function (entry, index) { return cardHtml(entry.item, (currentPage - 1) * pageSize + index, entry.tab); }).join("") : '<div class="empty">Chưa tìm thấy gợi ý phù hợp<span>Thử khu vực hoặc từ khoá khác nhé.</span></div>';
       var categoryTab = selected.length === 1 ? selected[0] : null;
       var target = categoryTab ? categoryTab.items.length : null;
-      if (categoryTab && categoryTab.id === "gifts") listEl.insertAdjacentHTML("afterbegin", giftAdviceHtml());
+      if (categoryTab && categoryTab.id === "gifts") {
+        listEl.insertAdjacentHTML("afterbegin", giftAdviceHtml());
+        var adviceDialog = document.getElementById("giftAdviceDialog");
+        listEl.querySelector(".gift-advice-trigger").addEventListener("click", function () { adviceDialog.showModal(); });
+        adviceDialog.addEventListener("click", function (event) { if (event.target === adviceDialog) adviceDialog.close(); });
+      }
       renderPagination(items.length);
       var firstItem = items.length ? (currentPage - 1) * pageSize + 1 : 0;
       var lastItem = Math.min(currentPage * pageSize, items.length);
