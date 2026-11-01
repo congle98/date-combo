@@ -3,6 +3,7 @@ if (typeof module !== "undefined" && module.exports && typeof require === "funct
   var COMBO_MAP_PRICE_DATA = COMBO_PRICE_DATA_BUNDLE.maps;
   var COMBO_VERIFIED_PRICE_DATA = COMBO_PRICE_DATA_BUNDLE.verified;
   var COMBO_PRICE_RULES = COMBO_PRICE_DATA_BUNDLE.rules;
+  var COMBO_MENS_PERFUMES = require("./perfume-data.js");
 }
 
 const COMBO_DATA = {
@@ -1893,6 +1894,10 @@ COMBO_DATA.intimate = {
     return item;
   })
 };
+
+// Perfumes are gift products rather than venues, so link each card directly
+// to the retailer/product page and preserve the product photo credit.
+COMBO_DATA.gifts.items = COMBO_DATA.gifts.items.concat(COMBO_MENS_PERFUMES);
 
 if (typeof module !== "undefined" && module.exports) {
   module.exports = COMBO_DATA;
