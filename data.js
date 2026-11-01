@@ -1838,6 +1838,62 @@ Object.keys(COMBO_DATA).forEach(function (category) {
   });
 });
 
+// A dedicated shortlist for quieter, more personal dates. Reuse the existing
+// venue records so every recommendation keeps its Google Maps/official photo,
+// attribution, source links, and price guidance.
+var intimateDateIdeas = [
+  ["Tầm Vị", "4B Yên Thế, Đống Đa, Hà Nội", "Nhà gỗ và mâm cơm Bắc tạo nhịp ăn uống thong thả. Đặt bàn trước và nhắn xin chỗ yên tĩnh nếu muốn trò chuyện riêng."],
+  ["Lamai Garden", "36B Đê Quai, Tứ Liên, Tây Hồ, Hà Nội", "Không gian nhà hàng sân vườn bên hồ, hợp buổi tối chậm rãi. Xác nhận lịch mở cửa và đặt bàn trước."],
+  ["Chapter Dining", "12C Chân Cầm, Hoàn Kiếm, Hà Nội", "Tasting menu theo mùa trong không gian quy mô nhỏ; hợp buổi hẹn muốn cùng khám phá món mới. Cần đặt chỗ."],
+  ["La Badiane", "10 Nam Ngư, Hoàn Kiếm, Hà Nội", "Ẩm thực Pháp–Việt trong biệt thự cổ, hợp bữa tối kỷ niệm. Báo trước dịp đặc biệt và hỏi bàn ít ồn."],
+  ["La Verticale", "19 Ngô Văn Sở, Hoàn Kiếm, Hà Nội", "Biệt thự phong cách Đông Dương và thực đơn Pháp–Việt cho một bữa tối thư thả. Nên đặt bàn."],
+  ["T.U.N.G Dining", "2C Quang Trung, Hoàn Kiếm, Hà Nội", "Tasting menu nhiều món để hai người có trải nghiệm chung; kiểm tra thực đơn theo mùa và thời lượng trước khi đặt."],
+  ["Gia Restaurant", "61 Văn Miếu, Đống Đa, Hà Nội", "Tasting menu hiện đại cho dịp cần chuẩn bị kỹ. Xem mức chi phí trước, đặt chỗ và báo yêu cầu ăn kiêng."],
+  ["Backstage", "11 Lê Phụng Hiểu, Hoàn Kiếm, Hà Nội", "Nhà hàng Việt trong Capella Hanoi với không gian sân khấu cổ điển. Hợp một tối chỉn chu; đặt trước để chọn bàn."],
+  ["Diva’s Lounge", "11 Lê Phụng Hiểu, Hoàn Kiếm, Hà Nội", "Lounge phong cách opera cho trà chiều hoặc đồ uống. Kiểm tra lịch phục vụ và hỏi chỗ ngồi yên trước khi tới."],
+  ["The Lounge - JW Marriott Hanoi", "8 Đỗ Đức Dục, Mễ Trì, Nam Từ Liêm, Hà Nội", "Lounge khách sạn hợp hẹn trà chiều và trò chuyện. Kiểm tra khung giờ, gói trà và yêu cầu bàn yên tĩnh."],
+  ["Cafe du Lac", "5 Từ Hoa, Tây Hồ, Hà Nội", "Nhà hàng bên Hồ Tây, phù hợp bữa ăn ngắm mặt nước. Đặt chỗ trước và hỏi bàn hướng hồ còn trống không."],
+  ["Le Beaulieu", "15 Ngô Quyền, Hoàn Kiếm, Hà Nội", "Nhà hàng Pháp cổ điển cho kỷ niệm hoặc bữa tối trang trọng. Xem thực đơn hiện hành và đặt bàn trước."],
+  ["Angelina", "15 Ngô Quyền, Hoàn Kiếm, Hà Nội", "Nhà hàng kiêm whisky lounge, tiện nối bữa tối với đồ uống. Hỏi trước khu vực phù hợp nếu muốn nói chuyện yên."],
+  ["Sunset Bar - InterContinental Hanoi Westlake", "5 Từ Hoa, Tây Hồ, Hà Nội", "Bar trên mặt nước để ngắm hoàng hôn cùng đồ uống. Chọn ngày ít mưa, kiểm tra giờ và đặt chỗ ngoài trời."],
+  ["Mau Restaurant", "23 Hàng Bè, Hoàn Kiếm, Hà Nội", "Nhà hàng quy mô nhỏ, hợp bữa tối gần phố cổ. Kiểm tra menu và đặt trước để tránh phải chờ."],
+  ["Tanh Tách", "3B Tống Duy Tân, Hoàn Kiếm, Hà Nội", "Thực đơn Việt đương đại cho buổi hẹn thích thử món mới. Hỏi menu theo mùa và khung giờ vắng."],
+  ["Vien Dining", "12 Lý Đạo Thành, Hoàn Kiếm, Hà Nội", "Trải nghiệm ăn tối theo thực đơn chọn lọc; hợp dịp muốn tập trung thưởng thức. Đặt trước và xác nhận ngân sách."],
+  ["Zao Vietnamese Cuisine", "12 Hàng Điếu, Hoàn Kiếm, Hà Nội", "Ẩm thực Việt trong không gian chỉn chu, phù hợp bữa tối thân mật. Nên hỏi bàn góc và đặt trước."],
+  ["Senté", "20 Nguyễn Quang Bích, Hoàn Kiếm, Hà Nội", "Món Việt theo hướng hiện đại trong không gian nhỏ. Hợp buổi hẹn gần phố cổ; hỏi giờ ít đông khi đặt bàn."],
+  ["Habakuk", "4 Phan Huy Chú, Hoàn Kiếm, Hà Nội", "Nhà hàng nhỏ với món Âu theo mùa, hợp bữa tối trò chuyện. Xác nhận giờ mở cửa và đặt bàn."],
+  ["The East", "75 Hàng Bè, Hoàn Kiếm, Hà Nội", "Món Việt trong nhà phố khu trung tâm; chọn giờ sớm để không gian dễ trò chuyện hơn và đặt trước."],
+  ["Cafe Ban Công", "2 Đinh Liệt, Hoàn Kiếm, Hà Nội", "Café trong nhà cổ, có nhiều góc ngồi nhìn phố. Thường đông vào giờ cao điểm; thử đi buổi sáng ngày thường."],
+  ["Tranquil Books & Coffee", "5 Nguyễn Quang Bích, Hoàn Kiếm, Hà Nội", "Café sách hợp buổi hẹn yên, đọc hoặc trò chuyện nhỏ nhẹ. Tôn trọng quy định giữ yên tĩnh của quán."],
+  ["Loading T", "8 Chân Cầm, Hoàn Kiếm, Hà Nội", "Café trong biệt thự cũ, hợp hẹn cà phê và trò chuyện nhẹ nhàng. Kiểm tra giờ mở cửa trước khi đi."],
+  ["Xofa Cafe & Bistro", "14 Tống Duy Tân, Hoàn Kiếm, Hà Nội", "Café–bistro mở muộn với nhiều khu vực ngồi, hợp buổi hẹn linh hoạt. Cuối tuần nên chọn giờ sớm."],
+  ["The Hanoi Social Club", "6 Hội Vũ, Hoàn Kiếm, Hà Nội", "Không gian café nhiều tầng, có chất nghệ thuật và phù hợp trò chuyện. Kiểm tra lịch nhạc/sự kiện vì độ yên tĩnh thay đổi."],
+  ["Nola Cafe", "89 Mã Mây, Hoàn Kiếm, Hà Nội", "Café nhiều tầng trong nhà phố cổ, có các góc ngồi tách biệt tương đối. Hỏi chỗ ngồi phù hợp và tránh giờ đông."],
+  ["Tầng Trệt Cosmo Cafe", "10 Khúc Hạo, Ba Đình, Hà Nội", "Café nhỏ ở khu Khúc Hạo, hợp một buổi hẹn nhẹ nhàng. Xác nhận tình trạng hoạt động và giờ mở cửa trước khi ghé."],
+  ["VULAB Specialty Coffee", "30B Xóm Hà Hồi, Hoàn Kiếm, Hà Nội", "Café đặc sản có khu vực sân trong theo nguồn địa điểm; hợp hẹn ban ngày. Hỏi trước chỗ sân còn phục vụ không."],
+  ["Manzi Art Space and Cafe", "14 Phan Huy Ích, Ba Đình, Hà Nội", "Không gian nghệ thuật kiêm café cho buổi hẹn xem triển lãm và trò chuyện. Kiểm tra lịch sự kiện vì có thể thay đổi cách bố trí." ]
+];
+
+COMBO_DATA.intimate = {
+  id: "intimate",
+  emoji: "🕯️",
+  label: "Hẹn hò thân mật",
+  items: intimateDateIdeas.map(function (row) {
+    var sourceGroup = [COMBO_DATA.special, COMBO_DATA.drinks, COMBO_DATA.food];
+    var original = null;
+    sourceGroup.some(function (group) {
+      original = group.items.find(function (item) { return item.name === row[0] && item.address === row[1]; });
+      return Boolean(original);
+    });
+    if (!original) throw new Error("Missing existing venue for intimate date: " + row[0] + " | " + row[1]);
+    var item = Object.assign({}, original);
+    item.desc = row[2];
+    item.subcategory = item.subcategory.indexOf("Cà phê") !== -1 || item.subcategory.indexOf("Café") !== -1 ? "Cà phê yên tĩnh" : item.subcategory.indexOf("Lounge") !== -1 || item.subcategory.indexOf("Rooftop") !== -1 ? "Lounge & hoàng hôn" : "Nhà hàng ấm cúng";
+    item.priceBasis = (item.priceBasis || "chi tiêu tham khảo / người") + " · tham khảo khi hẹn đôi";
+    return item;
+  })
+};
+
 if (typeof module !== "undefined" && module.exports) {
   module.exports = COMBO_DATA;
 }

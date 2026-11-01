@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  var order = ["food", "drinks", "special", "activities", "gifts", "getaway"];
+  var order = ["food", "drinks", "special", "intimate", "activities", "gifts", "getaway"];
   var foodTabs = order.filter(function (key) { return COMBO_DATA[key]; }).map(function (key) { return COMBO_DATA[key]; });
   var ideas = [];
   var tabs = foodTabs.concat(ideas.filter(function (idea) { return !COMBO_DATA[idea.id]; }));
